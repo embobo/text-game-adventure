@@ -10,7 +10,6 @@
 		B5844DAE1E41357B00D7FC7E /* map-layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5844DAC1E41357B00D7FC7E /* map-layout.cpp */; };
 		B5D4C93B1E317BC400650AFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C93A1E317BC400650AFC /* main.cpp */; };
 		B5D4C9441E36CC8D00650AFC /* game-narrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */; };
-		B5D4C9531E3A714E00650AFC /* game-map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9511E3A714E00650AFC /* game-map.cpp */; };
 		B5D4C9571E3A91A600650AFC /* game-area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9551E3A91A600650AFC /* game-area.cpp */; };
 		B5D4C95A1E3A920F00650AFC /* game-item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9581E3A920F00650AFC /* game-item.cpp */; };
 /* End PBXBuildFile section */
@@ -35,8 +34,6 @@
 		B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-narrator.cpp"; sourceTree = "<group>"; };
 		B5D4C9431E36CC8D00650AFC /* game-narrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-narrator.hpp"; sourceTree = "<group>"; };
 		B5D4C9481E37FA0800650AFC /* emotions-file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "emotions-file.txt"; sourceTree = "<group>"; };
-		B5D4C9511E3A714E00650AFC /* game-map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-map.cpp"; sourceTree = "<group>"; };
-		B5D4C9521E3A714E00650AFC /* game-map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-map.hpp"; sourceTree = "<group>"; };
 		B5D4C9541E3A8DC200650AFC /* action-variants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "action-variants.txt"; sourceTree = "<group>"; };
 		B5D4C9551E3A91A600650AFC /* game-area.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-area.cpp"; sourceTree = "<group>"; };
 		B5D4C9561E3A91A600650AFC /* game-area.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-area.hpp"; sourceTree = "<group>"; };
@@ -78,8 +75,6 @@
 				B5D4C93A1E317BC400650AFC /* main.cpp */,
 				B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */,
 				B5D4C9431E36CC8D00650AFC /* game-narrator.hpp */,
-				B5D4C9511E3A714E00650AFC /* game-map.cpp */,
-				B5D4C9521E3A714E00650AFC /* game-map.hpp */,
 				B5844DAC1E41357B00D7FC7E /* map-layout.cpp */,
 				B5844DAD1E41357B00D7FC7E /* map-layout.hpp */,
 				B5D4C9581E3A920F00650AFC /* game-item.cpp */,
@@ -150,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D4C9531E3A714E00650AFC /* game-map.cpp in Sources */,
 				B5D4C9441E36CC8D00650AFC /* game-narrator.cpp in Sources */,
 				B5844DAE1E41357B00D7FC7E /* map-layout.cpp in Sources */,
 				B5D4C93B1E317BC400650AFC /* main.cpp in Sources */,

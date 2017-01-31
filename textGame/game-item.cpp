@@ -35,21 +35,22 @@ bool GameItemType::IsConsumable() const {
 
 
 void GameItemSet::ReadInItemsFromFile(ifstream* f_h) {
-
     // iterate through file and add items
     string line;
     while (getline (*f_h,line))
     {
-        // add items to map
         ParseLineAddItem(line);
     }
     f_h->close();
 }
 
 void GameItemSet::ParseLineAddItem(string line) {
-    string name = "";
-    
-    GameItemType* item = new GameItemType();
+    string name;
+    bool move,consume;
+    stringstream linestream(line);
+    linestream >> name >> move >> consume;
+    GameItemType* item = new GameItemType(name,move,consume);
+    itemSet[name] = item;
 }
 
 GameItemSet::GameItemSet() {

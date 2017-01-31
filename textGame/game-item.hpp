@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <map>
 #include <fstream>
+#include <sstream>
 #include "game-area.hpp"
 #define DEFAULTFILE "game-items-set"
 
