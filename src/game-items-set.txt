@@ -1,0 +1,6 @@
+alarm clock 1   0
+bed 0   1
+stapler 1   0
+paper   1   1
+stick   1   1
+magnifying glass    1   0
