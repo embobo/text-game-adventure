@@ -13,7 +13,7 @@
 #include <map>
 #include <fstream>
 #include <sstream>
-#include "game-area.hpp"
+#include "GameArea.hpp"
 #define DEFAULTFILE "game-items-set"
 
 using namespace std;
@@ -21,27 +21,27 @@ using namespace std;
 class GameItemType {
 protected:
     string name;
-    bool isMoveable;
-    bool isConsumable;
+    bool moveable;
+    bool consumable;
 public:
     GameItemType();
     GameItemType(string item_name);
     GameItemType(string item_name, bool is_moveable);
     GameItemType(string item_name, bool is_moveable, bool is_consumable);
-    string GetName() const;
-    bool IsMoveable() const;
-    bool IsConsumable() const;
+    string getName() const;
+    bool isMoveable() const;
+    bool isConsumable() const;
 };
 
 class GameItemSet {
 private:
     map<string,GameItemType*> itemSet; // map of all types of game items in game
 
-    void ReadInItemsFromFile(ifstream* f_h);
-    void ParseLineAddItem(string line);
+    void readInItemsFromFile(ifstream* f_h);
+    void parseLineAddItem(string line);
 public:
     GameItemSet(); // read in from default file all game items
-    const GameItemType* GetItemInfoByName(string name);
+    const GameItemType* getItemInfoByName(string name);
 };
 
 #endif /* game_item_hpp */

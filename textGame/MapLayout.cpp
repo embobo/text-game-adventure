@@ -6,4 +6,4 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "map-layout.hpp"
+#include "MapLayout.hpp"

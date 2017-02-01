@@ -6,11 +6,11 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "game-area.hpp"
+#include "GameArea.hpp"
 
 GameArea::GameArea(string area_name) {
     name = area_name;
 }
-string GameArea::GetAreaName() const {
+string GameArea::getAreaName() const {
     return name;
 }

@@ -10,6 +10,6 @@
 #define map_layout_hpp
 
 #include <stdio.h>
-#include "game-area.hpp"
+#include "GameArea.hpp"
 
 #endif /* map_layout_hpp */

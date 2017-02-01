@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5844DAE1E41357B00D7FC7E /* map-layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5844DAC1E41357B00D7FC7E /* map-layout.cpp */; };
+		B535A50A1E427CFF004025EB /* GameArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B535A5021E427CFF004025EB /* GameArea.cpp */; };
+		B535A50B1E427CFF004025EB /* GameItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B535A5041E427CFF004025EB /* GameItem.cpp */; };
+		B535A50C1E427CFF004025EB /* GameNarrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B535A5061E427CFF004025EB /* GameNarrator.cpp */; };
+		B535A50D1E427CFF004025EB /* MapLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B535A5081E427CFF004025EB /* MapLayout.cpp */; };
 		B5D4C93B1E317BC400650AFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C93A1E317BC400650AFC /* main.cpp */; };
-		B5D4C9441E36CC8D00650AFC /* game-narrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */; };
-		B5D4C9571E3A91A600650AFC /* game-area.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9551E3A91A600650AFC /* game-area.cpp */; };
-		B5D4C95A1E3A920F00650AFC /* game-item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C9581E3A920F00650AFC /* game-item.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,19 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B5844DAC1E41357B00D7FC7E /* map-layout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "map-layout.cpp"; sourceTree = "<group>"; };
-		B5844DAD1E41357B00D7FC7E /* map-layout.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "map-layout.hpp"; sourceTree = "<group>"; };
+		B535A5021E427CFF004025EB /* GameArea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameArea.cpp; sourceTree = "<group>"; };
+		B535A5031E427CFF004025EB /* GameArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameArea.hpp; sourceTree = "<group>"; };
+		B535A5041E427CFF004025EB /* GameItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameItem.cpp; sourceTree = "<group>"; };
+		B535A5051E427CFF004025EB /* GameItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameItem.hpp; sourceTree = "<group>"; };
+		B535A5061E427CFF004025EB /* GameNarrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameNarrator.cpp; sourceTree = "<group>"; };
+		B535A5071E427CFF004025EB /* GameNarrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameNarrator.hpp; sourceTree = "<group>"; };
+		B535A5081E427CFF004025EB /* MapLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapLayout.cpp; sourceTree = "<group>"; };
+		B535A5091E427CFF004025EB /* MapLayout.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapLayout.hpp; sourceTree = "<group>"; };
 		B5D4C9371E317BC400650AFC /* textGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = textGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D4C93A1E317BC400650AFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-narrator.cpp"; sourceTree = "<group>"; };
-		B5D4C9431E36CC8D00650AFC /* game-narrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-narrator.hpp"; sourceTree = "<group>"; };
-		B5D4C9481E37FA0800650AFC /* emotions-file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "emotions-file.txt"; sourceTree = "<group>"; };
-		B5D4C9541E3A8DC200650AFC /* action-variants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "action-variants.txt"; sourceTree = "<group>"; };
-		B5D4C9551E3A91A600650AFC /* game-area.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-area.cpp"; sourceTree = "<group>"; };
-		B5D4C9561E3A91A600650AFC /* game-area.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-area.hpp"; sourceTree = "<group>"; };
-		B5D4C9581E3A920F00650AFC /* game-item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "game-item.cpp"; sourceTree = "<group>"; };
-		B5D4C9591E3A920F00650AFC /* game-item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "game-item.hpp"; sourceTree = "<group>"; };
-		B5D4C95B1E3AAE6500650AFC /* game-items-set.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "game-items-set.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,18 +69,15 @@
 		B5D4C9391E317BC400650AFC /* textGame */ = {
 			isa = PBXGroup;
 			children = (
+				B535A5021E427CFF004025EB /* GameArea.cpp */,
+				B535A5031E427CFF004025EB /* GameArea.hpp */,
+				B535A5041E427CFF004025EB /* GameItem.cpp */,
+				B535A5051E427CFF004025EB /* GameItem.hpp */,
+				B535A5061E427CFF004025EB /* GameNarrator.cpp */,
+				B535A5071E427CFF004025EB /* GameNarrator.hpp */,
+				B535A5081E427CFF004025EB /* MapLayout.cpp */,
+				B535A5091E427CFF004025EB /* MapLayout.hpp */,
 				B5D4C93A1E317BC400650AFC /* main.cpp */,
-				B5D4C9421E36CC8D00650AFC /* game-narrator.cpp */,
-				B5D4C9431E36CC8D00650AFC /* game-narrator.hpp */,
-				B5844DAC1E41357B00D7FC7E /* map-layout.cpp */,
-				B5844DAD1E41357B00D7FC7E /* map-layout.hpp */,
-				B5D4C9581E3A920F00650AFC /* game-item.cpp */,
-				B5D4C9591E3A920F00650AFC /* game-item.hpp */,
-				B5D4C9551E3A91A600650AFC /* game-area.cpp */,
-				B5D4C9561E3A91A600650AFC /* game-area.hpp */,
-				B5D4C9481E37FA0800650AFC /* emotions-file.txt */,
-				B5D4C95B1E3AAE6500650AFC /* game-items-set.txt */,
-				B5D4C9541E3A8DC200650AFC /* action-variants.txt */,
 			);
 			path = textGame;
 			sourceTree = "<group>";
@@ -145,11 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5D4C9441E36CC8D00650AFC /* game-narrator.cpp in Sources */,
-				B5844DAE1E41357B00D7FC7E /* map-layout.cpp in Sources */,
+				B535A50C1E427CFF004025EB /* GameNarrator.cpp in Sources */,
+				B535A50D1E427CFF004025EB /* MapLayout.cpp in Sources */,
+				B535A50A1E427CFF004025EB /* GameArea.cpp in Sources */,
 				B5D4C93B1E317BC400650AFC /* main.cpp in Sources */,
-				B5D4C95A1E3A920F00650AFC /* game-item.cpp in Sources */,
-				B5D4C9571E3A91A600650AFC /* game-area.cpp in Sources */,
+				B535A50B1E427CFF004025EB /* GameItem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

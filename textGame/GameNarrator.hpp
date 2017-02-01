@@ -9,7 +9,7 @@
 #ifndef game_narrator_hpp
 #define game_narrator_hpp
 
-#include "game-area.hpp"
+#include "GameArea.hpp"
 #define MAPWIDTH 10
 #define MAPHEIGHT 10
 
@@ -77,9 +77,9 @@ private:
 public:
     Narrator();
     ~Narrator();
-    void Reset();
-    string GetFeelings();
-    string Help();
+    void reset();
+    string getFeelings();
+    string help();
 };
 
 
