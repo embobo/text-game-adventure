@@ -33,7 +33,6 @@ bool GameItemType::IsConsumable() const {
     return isConsumable;
 }
 
-
 void GameItemSet::ReadInItemsFromFile(ifstream* f_h) {
     // iterate through file and add items
     string line;

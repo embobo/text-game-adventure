@@ -5,8 +5,7 @@
 //  Created by Emma on 1/19/17.
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
-#include "gameNarrator.hpp"
-#include "gameContainers.hpp"
+#include "game-narrator.hpp"
 
 using namespace std;
 
