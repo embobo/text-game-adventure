@@ -20,7 +20,7 @@ private:
     string name;
 public:
     GameArea(string area_name);
-    string GetAreaName() const;
+    string getAreaName() const;
 };
 
 #endif /* game_location_hpp */

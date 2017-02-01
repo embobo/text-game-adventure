@@ -9,7 +9,7 @@
 #ifndef game_narrator_hpp
 #define game_narrator_hpp
 
-#include "game-map.hpp"
+#include "GameArea.hpp"
 #define MAPWIDTH 10
 #define MAPHEIGHT 10
 
@@ -73,13 +73,13 @@ private:
         "ecstatic"
     };
     Emotion* emotions[4];
-    GameMap* map;
+    //GameMap* map;
 public:
     Narrator();
     ~Narrator();
-    void Reset();
-    string GetFeelings();
-    string Help();
+    void reset();
+    string getFeelings();
+    string help();
 };
 
 

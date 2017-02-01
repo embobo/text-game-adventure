@@ -6,7 +6,7 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "game-narrator.hpp"
+#include "GameNarrator.hpp"
 
 /* Emotion class  */
 Emotion::Emotion(string emote, string* feelingList, int numFeelings, int start) {
@@ -59,17 +59,15 @@ Narrator::~Narrator() {
     delete emotions[3];
     emotions[3] = NULL;
     
-    delete map;
-    map = NULL;
 }
 
-void Narrator::Reset() {
+void Narrator::reset() {
     for(int ii = 0; ii < 4; ++ii){
         emotions[ii]->reset();
     }
 }
 
-string Narrator::GetFeelings() {
+string Narrator::getFeelings() {
     string emote = "I feel ";
     for(int ii = 0; ii < 4; ++ii){
         // Todo: fix comma end
@@ -78,7 +76,7 @@ string Narrator::GetFeelings() {
     return emote;
 }
 
-string Narrator::Help() {
+string Narrator::help() {
     string help;
     // add things here
     return help;
