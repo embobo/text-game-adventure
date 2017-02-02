@@ -17,15 +17,36 @@
 
 class GameItemType {
 protected:
-    std::string name;
-    bool movable;
-    bool consumable;
+    const std::string name;
+    const std::string casualName;
+    const bool movable;
+    const bool consumable;
 public:
     GameItemType();
-    GameItemType(std::string item_name);
-    GameItemType(std::string item_name, bool is_movable);
-    GameItemType(std::string item_name, bool is_movable, bool is_consumable);
+
+    GameItemType(std::string _name);
+
+    GameItemType(std::string _name,
+                 std::string _casualName);
+
+    GameItemType(std::string _name,
+                 bool _movable);
+
+    GameItemType(std::string _name,
+                 std::string _casualName,
+                 bool _movable);
+
+    GameItemType(std::string _name,
+                 bool _movable,
+                 bool _consumable);
+
+    GameItemType(std::string _name,
+                 std::string _casualName,
+                 bool _movable,
+                 bool _consumable);
+
     std::string getName() const;
+    std::string getCasualName() const;
     bool isMovable() const;
     bool isConsumable() const;
 };

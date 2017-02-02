@@ -8,24 +8,56 @@
 
 #include "GameItemType.hpp"
 
-GameItemType::GameItemType(std::string item_name) : movable(false), consumable(false) {
-    name = item_name;
-}
+GameItemType::GameItemType()
+    : name("void"),
+    casualName("nothing"),
+    movable(false),
+    consumable(false) {}
 
-GameItemType::GameItemType(std::string item_name, bool is_movable) : consumable(false) {
-    name = item_name;
-    movable = is_movable;
-}
+GameItemType::GameItemType(std::string _name)
+    : name(_name),
+    casualName(_name),
+    movable(false),
+    consumable(false) {}
 
-GameItemType::GameItemType(std::string item_name, bool is_movable, bool is_consumable) {
-    name = item_name;
-    movable = is_movable;
-    consumable = is_consumable;
-}
+GameItemType::GameItemType(std::string _name, std::string _casualName)
+    : name(_name),
+    casualName(_casualName),
+    movable(false),
+    consumable(false) {}
+
+GameItemType::GameItemType(std::string _name, bool _movable)
+    : name(_name),
+    casualName(_name),
+    movable(_movable),
+    consumable(false) {}
+
+GameItemType::GameItemType(std::string _name, std::string _casualName, bool _movable)
+    : name(_name),
+    casualName(_casualName),
+    movable(_movable),
+    consumable(false) {}
+
+GameItemType::GameItemType(std::string _name, bool _movable, bool _consumable)
+    : name(_name),
+    casualName(_name),
+    movable(_movable),
+    consumable(_consumable) {}
+
+GameItemType::GameItemType(std::string _name, std::string _casualName, bool _movable, bool _consumable)
+    : name(_name),
+    casualName(_casualName),
+    movable(_movable),
+    consumable(_consumable) {}
 
 std::string GameItemType::getName() const {
     return name;
 }
+
+std::string GameItemType::getCasualName() const {
+    return casualName;
+}
+
 bool GameItemType::isMovable() const {
     return movable;
 }

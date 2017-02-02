@@ -12,7 +12,13 @@
 #include "GameItemType.hpp"
 
 class GameItemSet {
-
+public:
+    static const GameItemType alarmClock;
+    static const GameItemType refridgerator;
+    static const GameItemType paper;
+    static const GameItemType computer;
+    static const GameItemType stick;
+    static const GameItemType magnifyingGlass;
 };
 
 #endif /* GameItemType_hpp */
