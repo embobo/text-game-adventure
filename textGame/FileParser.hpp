@@ -18,6 +18,10 @@
 #include <list>
 #include "GameErrorCodes.hpp"
 
+/** @class FileParser
+ * @brief FileParser is used to retrieve and parse game files into usable string lists for the caller
+ */
+
 class FileParser {
 private:
     static int getFileContents(const std::string& _fileNamePath, std::string& _fileContent);

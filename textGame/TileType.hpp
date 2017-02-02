@@ -13,6 +13,10 @@
 #include <string>
 #include <utility>
 
+/** @class TileType
+ * @brief TileType is the base element for defining a game location
+ */
+
 class TileType {
 private:
     const std::string name;

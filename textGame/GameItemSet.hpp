@@ -11,6 +11,11 @@
 
 #include "GameItemType.hpp"
 
+/** @class GameItemSet
+ * @brief GameItemSet is the container for all types of game items
+ - it should be used as a static reference to item functionality
+ */
+
 class GameItemSet {
 private:
     static const GameItemType alarmClock;

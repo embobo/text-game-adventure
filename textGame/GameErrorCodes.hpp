@@ -11,6 +11,10 @@
 
 #include <stdio.h>
 
+/** @class GameErrorCodes
+ * @brief GameErrorCodes contains static int values to be used by the game to indicate various game specific errors
+ */
+
 class GameErrorCodes {
 public:
     static const int NO_ERR;

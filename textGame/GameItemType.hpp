@@ -14,6 +14,10 @@
 #include <sstream>
 #include "TileType.hpp"
 
+/** @class GameItemType
+ * @brief GameItemType is the base class for defining items. It is a static reference for getting item type functionality
+ */
+
 class GameItemType {
 protected:
     const std::string name;
