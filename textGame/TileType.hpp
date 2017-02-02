@@ -13,15 +13,17 @@
 #include <string>
 #include <utility>
 
-class GameArea {
+class TileType {
 private:
     std::string name;
+    bool accessible;
 public:
-    GameArea(std::string area_name);
+    TileType(std::string area_name);
     /**
      * returns unique area name
      */
     std::string getAreaName() const;
+    bool isAccessible() const;
 };
 
 #endif /* game_location_hpp */

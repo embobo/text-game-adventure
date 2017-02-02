@@ -8,26 +8,26 @@
 
 #include "GameItem.hpp"
 
-GameItem::GameItem(std::string item_name) : moveable(false), consumable(false) {
+GameItem::GameItem(std::string item_name) : movable(false), consumable(false) {
     name = item_name;
 }
 
-GameItem::GameItem(std::string item_name, bool is_moveable) : consumable(false) {
+GameItem::GameItem(std::string item_name, bool is_movable) : consumable(false) {
     name = item_name;
-    moveable = is_moveable;
+    movable = is_movable;
 }
 
-GameItem::GameItem(std::string item_name, bool is_moveable, bool is_consumable) {
+GameItem::GameItem(std::string item_name, bool is_movable, bool is_consumable) {
     name = item_name;
-    moveable = is_moveable;
+    movable = is_movable;
     consumable = is_consumable;
 }
 
 std::string GameItem::getName() const {
     return name;
 }
-bool GameItem::isMoveable() const {
-    return moveable;
+bool GameItem::isMovable() const {
+    return movable;
 }
 bool GameItem::isConsumable() const {
     return consumable;

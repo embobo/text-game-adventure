@@ -6,11 +6,14 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "GameArea.hpp"
+#include "TileType.hpp"
 
-GameArea::GameArea(std::string area_name) {
+TileType::TileType(std::string area_name) {
     name = area_name;
 }
-std::string GameArea::getAreaName() const {
+std::string TileType::getAreaName() const {
     return name;
+}
+bool TileType::isAccessible() const {
+    return accessible;
 }

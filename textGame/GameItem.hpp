@@ -18,15 +18,15 @@
 class GameItem {
 protected:
     std::string name;
-    bool moveable;
+    bool movable;
     bool consumable;
 public:
     GameItem();
     GameItem(std::string item_name);
-    GameItem(std::string item_name, bool is_moveable);
-    GameItem(std::string item_name, bool is_moveable, bool is_consumable);
+    GameItem(std::string item_name, bool is_movable);
+    GameItem(std::string item_name, bool is_movable, bool is_consumable);
     std::string getName() const;
-    bool isMoveable() const;
+    bool isMovable() const;
     bool isConsumable() const;
 };
 
