@@ -8,9 +8,9 @@
 
 #include "GameArea.hpp"
 
-GameArea::GameArea(string area_name) {
+GameArea::GameArea(std::string area_name) {
     name = area_name;
 }
-string GameArea::getAreaName() const {
+std::string GameArea::getAreaName() const {
     return name;
 }

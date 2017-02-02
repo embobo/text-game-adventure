@@ -13,14 +13,15 @@
 #include <string>
 #include <utility>
 
-using namespace std;
-
 class GameArea {
 private:
-    string name;
+    std::string name;
 public:
-    GameArea(string area_name);
-    string getAreaName() const;
+    GameArea(std::string area_name);
+    /**
+     * returns unique area name
+     */
+    std::string getAreaName() const;
 };
 
 #endif /* game_location_hpp */
