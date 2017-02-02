@@ -18,11 +18,14 @@ private:
     std::string name;
     bool accessible;
 public:
-    TileType(std::string area_name);
+    TileType(std::string area_name, bool is_accessible);
     /**
      * returns unique area name
      */
     std::string getAreaName() const;
+    /**
+     * returns whether user can access this tile type
+     */
     bool isAccessible() const;
 };
 

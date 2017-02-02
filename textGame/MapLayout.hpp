@@ -9,7 +9,6 @@
 #ifndef map_layout_hpp
 #define map_layout_hpp
 
-#include <stdio.h>
-#include "GameArea.hpp"
+#include "TileType.hpp"
 
 #endif /* map_layout_hpp */

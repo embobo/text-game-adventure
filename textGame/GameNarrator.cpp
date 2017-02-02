@@ -9,7 +9,7 @@
 #include "GameNarrator.hpp"
 
 /* Emotion class  */
-Emotion::Emotion(string emote, string* feelingList, int numFeelings, int start) {
+Emotion::Emotion(std::string emote, std::string* feelingList, int numFeelings, int start) {
     name = emote;
     base = start;
     intensity = 0;
@@ -35,7 +35,7 @@ int Emotion::getIntensity() {
     return intensity;
 }
 
-string Emotion::getFeeling() {
+std::string Emotion::getFeeling() {
     return feelings[base + intensity];
 }
 
@@ -67,8 +67,8 @@ void Narrator::reset() {
     }
 }
 
-string Narrator::getFeelings() {
-    string emote = "I feel ";
+std::string Narrator::getFeelings() {
+    std::string emote = "I feel ";
     for(int ii = 0; ii < 4; ++ii){
         // Todo: fix comma end
         emote = emote + emotions[ii]->getFeeling() + ", ";
@@ -76,8 +76,8 @@ string Narrator::getFeelings() {
     return emote;
 }
 
-string Narrator::help() {
-    string help;
+std::string Narrator::help() {
+    std::string help;
     // add things here
     return help;
 }

@@ -8,8 +8,9 @@
 
 #include "TileType.hpp"
 
-TileType::TileType(std::string area_name) {
+TileType::TileType(std::string area_name, bool is_accessible) {
     name = area_name;
+    accessible = is_accessible;
 }
 std::string TileType::getAreaName() const {
     return name;

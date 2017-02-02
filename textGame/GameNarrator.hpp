@@ -9,34 +9,33 @@
 #ifndef game_narrator_hpp
 #define game_narrator_hpp
 
-#include "GameArea.hpp"
+#include <string>
 #define MAPWIDTH 10
 #define MAPHEIGHT 10
 
-using namespace std;
 
 // Map endings into coordinate space and manipulate player coordinate based on emotions?
 
 class Emotion {
 private:
-    string name;
-    string* feelings;
+    std::string name;
+    std::string* feelings;
     int base;
     int intensity;
     int maxIntensity;
 public:
-    Emotion(string emote, string* feelingList, int numFeelings, int start);
+    Emotion(std::string emote, std::string* feelingList, int numFeelings, int start);
     void feelBetter();
     void feelWorse();
     void reset();
     int getIntensity();
-    string getFeeling();
+    std::string getFeeling();
 };
 
 class Narrator {
 private:
     // Todo: move these to config file and read in
-    string sUncertainty[7] =
+    std::string sUncertainty[7] =
     {   "terrified",
         "fearful",
         "cautious",
@@ -45,7 +44,7 @@ private:
         "confident",
         "understanding"
     };
-    string sTolerance[7] =
+    std::string sTolerance[7] =
     {   "angry",
         "frustrated",
         "enduring",
@@ -54,7 +53,7 @@ private:
         "accepting",
         "believing"
     };
-    string sIndifference[7]=
+    std::string sIndifference[7]=
     {   "repulsed",
         "disgusted",
         "bored",
@@ -63,7 +62,7 @@ private:
         "interested",
         "absorbed"
     };
-    string sEnjoyment[7]=
+    std::string sEnjoyment[7]=
     {   "grieved",
         "sad",
         "blue",
@@ -78,8 +77,8 @@ public:
     Narrator();
     ~Narrator();
     void reset();
-    string getFeelings();
-    string help();
+    std::string getFeelings();
+    std::string help();
 };
 
 

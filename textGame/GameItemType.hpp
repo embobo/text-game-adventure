@@ -13,18 +13,18 @@
 #include <map>
 #include <fstream>
 #include <sstream>
-#include "GameArea.hpp"
+#include "TileType.hpp"
 
-class GameItem {
+class GameItemType {
 protected:
     std::string name;
     bool movable;
     bool consumable;
 public:
-    GameItem();
-    GameItem(std::string item_name);
-    GameItem(std::string item_name, bool is_movable);
-    GameItem(std::string item_name, bool is_movable, bool is_consumable);
+    GameItemType();
+    GameItemType(std::string item_name);
+    GameItemType(std::string item_name, bool is_movable);
+    GameItemType(std::string item_name, bool is_movable, bool is_consumable);
     std::string getName() const;
     bool isMovable() const;
     bool isConsumable() const;
