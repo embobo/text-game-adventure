@@ -1,8 +1,9 @@
 //
-//  game-narrator.cpp
+//  GameNarrator.cpp
 //  textGame
 //
 //  Created by Emma on 1/23/17.
+//  @author Emma Bobola
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 

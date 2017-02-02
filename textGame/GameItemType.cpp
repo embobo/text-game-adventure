@@ -1,8 +1,9 @@
 //
-//  game-item.cpp
+//  GameItemType.cpp
 //  textGame
 //
 //  Created by Emma on 1/26/17.
+//  @author Emma Bobola
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
