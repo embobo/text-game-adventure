@@ -9,7 +9,7 @@
 #include "GameItemType.hpp"
 
 GameItemType::GameItemType()
-    : name("void"),
+    : name("nothing"),
     casualName("nothing"),
     movable(false),
     consumable(false) {}

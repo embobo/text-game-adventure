@@ -15,10 +15,13 @@
 
 class TileType {
 private:
-    std::string name;
+    const std::string name;
     bool accessible;
+    bool exitable;
 public:
-    TileType(std::string area_name, bool is_accessible);
+    TileType();
+    TileType(std::string _name, bool _accessible);
+    TileType(std::string _name, bool _accessible, bool _exitable);
     /**
      * returns unique area name
      */
@@ -27,6 +30,13 @@ public:
      * returns whether user can access this tile type
      */
     bool isAccessible() const;
+    /**
+     * returns whether user can leave this tile type
+     */
+    bool isExitable() const;
+
+    void setAccessible(bool _accessible);
+    void setExitable(bool _exitable);
 };
 
 #endif /* game_location_hpp */

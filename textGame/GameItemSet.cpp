@@ -8,9 +8,9 @@
 
 #include "GameItemSet.hpp"
 
-const GameItemType GameItemSet::alarmClock = GameItemType("alarm clock", true);
-const GameItemType refridgerator = GameItemType("refridgerator");
+const GameItemType GameItemSet::alarmClock = GameItemType("alarm clock", "clock", true);
+const GameItemType refridgerator = GameItemType("refridgerator", "fridge");
 const GameItemType paper = GameItemType("paper", true, true);
-const GameItemType computer = GameItemType("desktop");
+const GameItemType computer = GameItemType("desktop computer", "computer");
 const GameItemType stick = GameItemType("stick", true, true);
 const GameItemType magnifyingGlass = GameItemType("magnifying glass", true);

@@ -8,13 +8,24 @@
 
 #include "TileType.hpp"
 
-TileType::TileType(std::string area_name, bool is_accessible) {
-    name = area_name;
-    accessible = is_accessible;
-}
+TileType::TileType() : name("the void"), accessible(false), exitable(false) {}
+
+TileType::TileType(std::string _name, bool _accessible) : name(_name), accessible(_accessible), exitable(true) {}
+
+TileType::TileType(std::string _name, bool _accessible, bool _exitable) : name(_name), accessible(_accessible), exitable(_exitable) {}
+
 std::string TileType::getAreaName() const {
     return name;
 }
+
 bool TileType::isAccessible() const {
     return accessible;
 }
+
+bool TileType::isExitable() const {
+    return exitable;
+}
+
+void TileType::setAccessible(bool _accessible) { accessible = _accessible; }
+
+void TileType::setExitable(bool _exitable) { exitable = _exitable; }

@@ -10,7 +10,6 @@
 #define game_item_hpp
 
 #include <stdio.h>
-#include <map>
 #include <fstream>
 #include <sstream>
 #include "TileType.hpp"
