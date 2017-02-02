@@ -29,7 +29,7 @@ void GameItemSet::parseLineAddItem(std::string line) {
 
 GameItemSet::GameItemSet() {
     // get file handle
-    std::ifstream f_h (DEFAULTFILE);
+    std::ifstream f_h (defaultFile);
     if (!f_h.is_open()) {
         return;
     }
