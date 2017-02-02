@@ -25,17 +25,13 @@ private:
 public:
     /**
      * function which performs parsing
-     * given a vector this will append
+     * given a vector this will append each delimitted string
      */
     static int parseText(const std::string& _input, const char _delimitter, std::list<std::string>* _output);
     /**
-     * parse text from file by two delimiters
-     */
-    static int parseTextFromFile( const std::string& _fileNamePath, const std::string& _delimitter1, const std::string& _delimitter2, std::list<std::list<std::string>>* _output );
-    /**
      * parse text from file by one delimiter
      */
-    static int parseTextFromFile( const std::string& _fileNamePath, const std::string& _delimitter, std::list<std::string>* _output );
+    static int parseTextFromFile( const std::string& _fileNamePath, const char _delimitter, std::list<std::string>* _output );
 
 };
 
