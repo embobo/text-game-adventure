@@ -44,22 +44,22 @@ public:
      * @param _name string full name of game item
      * @note casualName set to name. movable and consumable set false
      */
-    GameItemType(std::string _name);
+    GameItemType(const std::string& _name);
     /**
      * Construct a game item type given name and casual name
      * @param _name string full name of game item
      * @param _casualName string casual name of game item
      * @note movable and consumable default to false
      */
-    GameItemType(std::string _name,
-                 std::string _casualName);
+    GameItemType(const std::string& _name,
+                 const std::string& _casualName);
     /**
      * Construct a game item type given name and if it's movable
      * @param _name string full name of game item
      * @param _movable bool true if player can pick up item
      * @note casualName defaults to name and consumable defaults to false
      */
-    GameItemType(std::string _name,
+    GameItemType(const std::string& _name,
                  bool _movable);
     /**
      * Construct a game item type given name, casual name and if it's movable
@@ -68,8 +68,8 @@ public:
      * @param _movable bool true if player can pick up item
      * @note consumable defaults to false
      */
-    GameItemType(std::string _name,
-                 std::string _casualName,
+    GameItemType(const std::string& _name,
+                 const std::string& _casualName,
                  bool _movable);
     /**
      * Construct a game item type given name, if it's movable, and if it's consumable
@@ -78,7 +78,7 @@ public:
      * @param _consumable bool true if player can destroy/use an item
      * @note casualName defaults to name
      */
-    GameItemType(std::string _name,
+    GameItemType(const std::string& _name,
                  bool _movable,
                  bool _consumable);
     /**
@@ -88,8 +88,8 @@ public:
      * @param _movable bool true if player can pick up item
      * @param _consumable bool true if player can destroy/use an item
      */
-    GameItemType(std::string _name,
-                 std::string _casualName,
+    GameItemType(const std::string& _name,
+                 const std::string& _casualName,
                  bool _movable,
                  bool _consumable);
     /// @} End of constructors

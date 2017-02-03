@@ -9,14 +9,22 @@
 
 #include "GameTile.hpp"
 
-GameTile::GameTile() : name("the void"), accessible(false), exitable(false) {}
 
-GameTile::GameTile(std::string _name, bool _accessible) : name(_name), accessible(_accessible), exitable(true) {}
 
-GameTile::GameTile(std::string _name, bool _accessible, bool _exitable) : name(_name), accessible(_accessible), exitable(_exitable) {}
+
+
+GameTile::GameTile() : name("the void"), tileType(TileType::HOME), accessible(false), exitable(false) {}
+
+GameTile::GameTile(const TileType& _tileType, const std::string& _name, bool _accessible) : tileType(_tileType), name(_name),accessible(_accessible), exitable(true) {}
+
+GameTile::GameTile(const TileType& _tileType, const std::string& _name,  bool _accessible, bool _exitable) : tileType(_tileType), name(_name), accessible(_accessible), exitable(_exitable) {}
 
 std::string GameTile::getTileName() const {
     return name;
+}
+
+TileType GameTile::getTileType() const {
+    return tileType;
 }
 
 bool GameTile::isAccessible() const {

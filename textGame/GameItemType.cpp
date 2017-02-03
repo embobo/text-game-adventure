@@ -15,37 +15,37 @@ GameItemType::GameItemType()
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(std::string _name)
+GameItemType::GameItemType(const std::string& _name)
     : name(_name),
     casualName(_name),
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(std::string _name, std::string _casualName)
+GameItemType::GameItemType(const std::string& _name, const std::string& _casualName)
     : name(_name),
     casualName(_casualName),
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(std::string _name, bool _movable)
+GameItemType::GameItemType(const std::string& _name, bool _movable)
     : name(_name),
     casualName(_name),
     movable(_movable),
     consumable(false) {}
 
-GameItemType::GameItemType(std::string _name, std::string _casualName, bool _movable)
+GameItemType::GameItemType(const std::string& _name, const std::string& _casualName, bool _movable)
     : name(_name),
     casualName(_casualName),
     movable(_movable),
     consumable(false) {}
 
-GameItemType::GameItemType(std::string _name, bool _movable, bool _consumable)
+GameItemType::GameItemType(const std::string& _name, bool _movable, bool _consumable)
     : name(_name),
     casualName(_name),
     movable(_movable),
     consumable(_consumable) {}
 
-GameItemType::GameItemType(std::string _name, std::string _casualName, bool _movable, bool _consumable)
+GameItemType::GameItemType(const std::string& _name, const std::string& _casualName, bool _movable, bool _consumable)
     : name(_name),
     casualName(_casualName),
     movable(_movable),

@@ -11,8 +11,8 @@
 #define GameTile_hpp
 
 #include <stdio.h>
-#include <string>
 #include <utility>
+#include "TileType.hpp"
 
 /** @class GameTile
  * @brief GameTile is the base element for defining a game location
@@ -20,24 +20,15 @@
 
 class GameTile {
 private:
-    /** @enum set of tile types */
-    static enum TileTypes = { Home, Work, Other };
+
     /** name of GameTile */
     const std::string name;
+    /** type of GameTile */
+    const TileType tileType;
     /** true if player can enter this tile */
     bool accessible;
     /** true if player can leave this tile */
     bool exitable;
-
-    /// @{
-    /// @name private methods for GameTile
-
-    /**
-     *
-     */
-    std::string parseTileType();
-
-    /// @}
 
 public:
     /// @{
@@ -54,14 +45,14 @@ public:
      * @param _accessible bool true if player can access
      * @note exitable set true by default
      */
-    GameTile(std::string _name, bool _accessible);
+    GameTile(const TileType& _tileType, const std::string& _name, bool _accessible);
     /**
      * Construct a GameTile given name, if player has access and exit ability
      * @param _name string name of GameTile
      * @param _accessible bool true if player can access
      * @param _exitable bool true if player can exit
      */
-    GameTile(std::string _name, bool _accessible, bool _exitable);
+    GameTile(const TileType& _tileType, const std::string& _name, bool _accessible, bool _exitable);
 
     /// @}
 
@@ -73,6 +64,14 @@ public:
      * @return string unique GameTile name
      */
     std::string getTileName() const;
+    /**
+     * @return string of the TileType
+     */
+    TileType getTileType() const;
+    /**
+     * @return string of the tile name and type
+     */
+    std::string getTileDetail() const;
     /**
      * @return bool whether user can access this GameTile
      */
@@ -89,6 +88,7 @@ public:
      * @param _exitable true if player can exit this GameTile
      */
     void setExitable(bool _exitable);
+
     /// @}
 };
 

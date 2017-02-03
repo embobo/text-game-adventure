@@ -25,18 +25,27 @@
 
 class FileParser {
 private:
-    static int getFileContents(const std::string& _fileNamePath, std::string& _fileContent);
+    /**
+     * @param _fileNamePath string pathname to file
+     * @return string which file contents are written
+     */
+    static std::string getFileContents(const std::string& _fileNamePath);
 
 public:
     /**
      * function which performs parsing
-     * given a vector this will append each delimitted string
+     * @param _input string to parse
+     * @param _delimitter char to separate string
+     * @return list of parsed strings
      */
-    static int parseText(const std::string& _input, const char _delimitter, std::list<std::string>* _output);
+    static std::list<std::string> parseText(const std::string& _input, const char& _delimitter);
     /**
      * parse text from file by one delimiter
+     * @param _fileNamePath string pathname to file
+     * @param _delimitter char to separate string
+     * @return list of parsed strings
      */
-    static int parseTextFromFile( const std::string& _fileNamePath, const char _delimitter, std::list<std::string>* _output );
+    static std::list<std::string> parseTextFromFile( const std::string& _fileNamePath, const char& _delimitter );
 
 };
 
