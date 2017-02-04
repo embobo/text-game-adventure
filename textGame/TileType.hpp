@@ -13,6 +13,6 @@
 #include <string>
 
 /** @enum types of game tiles */
-enum TileType { HOME, WORK, NONE, OTHER };
+enum TileType { HOME, WORK, VOID, OTHER };
 
 #endif /* TileType_hpp */

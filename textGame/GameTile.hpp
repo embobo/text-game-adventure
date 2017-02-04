@@ -30,7 +30,6 @@ private:
     /** true if player can leave this tile */
     bool exitable;
 
-public:
     /// @{
     /// @name Constructors for GameTile
 
@@ -56,6 +55,25 @@ public:
 
     /// @}
 
+public:
+    /** @todo change constructors to private and have a public Create function return a Node to perform checking
+     */
+
+    /// @{
+    /// @name Builder for GameTile
+
+    /**
+     * @param _tileType TileType defining the type of tile
+     * @param _name string unique or specific name of the GameTile
+     * @param _accessible bool true if player can access this tile
+     * @param _exitable bool true if player can exit this tile
+     * @return GameTile* a new built game tile after checks
+     *
+     * @warning assigning the TileType as "VOID" will set name to "void," accessible to true, and exitable to false
+     */
+    GameTile* buildGameTile(const TileType& _tileType, const std::string& _name, bool _accessible, bool _exitable);
+
+    /// @}
 
     /// @{
     /// @name Setters and Getters for GameTile properties
