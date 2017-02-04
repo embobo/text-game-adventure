@@ -33,7 +33,6 @@ private:
     bool exitable;
     /** set of items contained on this tile */
 
-
     /// @{
     /// @name Constructors for GameTile
 
@@ -62,11 +61,14 @@ private:
              bool bAccessible,
              bool bExitable);
 
+    ~GameTile();
+
     /// @}
 
 public:
-    /** @todo change constructors to private and have a public Create function return a Node to perform checking
-     */
+
+    /** items contained on this tile */
+    GameItemContainer* tileItems;
 
     /// @{
     /// @name Builder for GameTile
@@ -118,6 +120,7 @@ public:
      * @param bExitable true if player can exit this GameTile
      */
     void setExitable(bool bExitable);
+
 
     /// @}
 };

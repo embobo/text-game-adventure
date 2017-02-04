@@ -45,7 +45,7 @@ public:
     /**
      * @return instance of GameItemReferenceSet
      */
-    GameItemReferenceSet build();
+    GameItemReferenceSet* build() const;
 
     /// @}
 };

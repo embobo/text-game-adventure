@@ -25,8 +25,8 @@ GameItemReferenceSetBuilder::GameItemReferenceSetBuilder() {
 
 GameItemReferenceSetBuilder::~GameItemReferenceSetBuilder() {}
 
-GameItemReferenceSet GameItemReferenceSetBuilder::build() {
-    return *new GameItemReferenceSet(referenceSet);
+GameItemReferenceSet* GameItemReferenceSetBuilder::build() const {
+    return new GameItemReferenceSet(referenceSet);
 }
 
 std::map<std::string,GameItemType> GameItemReferenceSetBuilder::getReferenceSet() const {

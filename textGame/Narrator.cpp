@@ -9,7 +9,7 @@
 
 #include "Narrator.hpp"
 
-const GameItemReferenceSet Narrator::itemReference = GameItemReferenceSetBuilder().build();
+const GameItemReferenceSet* Narrator::itemReference = GameItemReferenceSetBuilder().build();
 
 /* Emotion class  */
 Emotion::Emotion(std::string emote, std::string* feelingList, int numFeelings, int start) {

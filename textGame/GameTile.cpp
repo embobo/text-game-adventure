@@ -13,7 +13,9 @@ GameTile::GameTile()
     : name("the void"),
     tileType(TileType::VOID),
     accessible(true),
-    exitable(false) {}
+    exitable(false) {
+        tileItems = new GameItemContainer();
+    }
 
 GameTile::GameTile(const TileType& aTileType,
                    const std::string& aName,
@@ -21,7 +23,9 @@ GameTile::GameTile(const TileType& aTileType,
     : tileType(aTileType),
     name(aName),
     accessible(bAccessible),
-    exitable(true) {}
+    exitable(true) {
+        tileItems = new GameItemContainer();
+    }
 
 GameTile::GameTile(const TileType& aTileType,
                    const std::string& aName,
@@ -30,7 +34,14 @@ GameTile::GameTile(const TileType& aTileType,
     : tileType(aTileType),
     name(aName),
     accessible(bAccessible),
-    exitable(bExitable) {}
+    exitable(bExitable) {
+        tileItems = new GameItemContainer();
+    }
+
+GameTile::~GameTile() {
+    delete tileItems;
+    tileItems = NULL;
+}
 
 GameTile* GameTile::gameTileBuilder(const TileType& aTileType,
                                     const std::string& aName,
@@ -39,6 +50,9 @@ GameTile* GameTile::gameTileBuilder(const TileType& aTileType,
 
     if( aTileType == TileType::VOID ) {
         return new GameTile();
+    }
+    if( aTileType == TileType::WALL ) {
+        return new GameTile(aTileType, "a wall", 0, 0);
     }
     return new GameTile(aTileType, aName, bAccessible, bExitable);
 }

@@ -8,3 +8,5 @@
 //
 
 #include "MapLayout.hpp"
+
+MapLayout::MapLayout(const GameTile* *layout) : gameMap(layout) {}

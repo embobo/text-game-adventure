@@ -13,4 +13,21 @@
 
 #include "GameTile.hpp"
 
+/**
+ * @class MapLayout contains the game map and navigation
+ */
+
+class MapLayout {
+private:
+    /** 2D array of GameTiles representing the game map */
+    const GameTile* *gameMap;
+public:
+    /// @{
+    /// @name MapLayout Constructors and Destructors
+
+    MapLayout(const GameTile* *layout);
+
+    /// @}
+};
+
 #endif /* MapLayout_hpp */

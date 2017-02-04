@@ -21,7 +21,7 @@
 class GameItemReferenceSet {
 private:
     /** @name Reference set of GameItems */
-    const std::map<std::string, GameItemType> ReferenceSet;
+    const std::map<std::string, GameItemType> referenceSet;
 
 public:
     /// @{

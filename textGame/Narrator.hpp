@@ -73,7 +73,7 @@ private:
     Emotion* emotions[4];
 
     /** Reference to GameItemTypes */
-    static const GameItemReferenceSet itemReference;
+    static const GameItemReferenceSet* itemReference;
     //GameMap* map;
 public:
     Narrator();

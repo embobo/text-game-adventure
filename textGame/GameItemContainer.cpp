@@ -8,6 +8,8 @@
 
 #include "GameItemContainer.hpp"
 
+GameItemContainer::GameItemContainer() {}
+
 int GameItemContainer::getItemCount(const std::string& itemName) const {
     if( itemCounts.count(itemName) > 0 )
         return itemCounts.at(itemName);

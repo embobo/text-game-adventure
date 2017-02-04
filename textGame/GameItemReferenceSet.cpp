@@ -10,4 +10,4 @@
 #include "GameItemReferenceSet.hpp"
 
 GameItemReferenceSet::GameItemReferenceSet(const std::map<std::string, GameItemType>& aReferenceSet)
-: ReferenceSet(aReferenceSet) {}
+: referenceSet(aReferenceSet) {}
