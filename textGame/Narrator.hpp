@@ -1,5 +1,5 @@
 //
-//  GameNarrator.hpp
+//  Narrator.hpp
 //  textGame
 //
 //  Created by Emma on 1/23/17.
@@ -7,12 +7,10 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#ifndef game_narrator_hpp
-#define game_narrator_hpp
-
-#include <string>
-#define MAPWIDTH 10
-#define MAPHEIGHT 10
+#ifndef Narrator_hpp
+#define Narrator_hpp
+#include "GameItemReferenceSetBuilder.hpp"
+#include "MapLayout.hpp"
 
 
 // Map endings into coordinate space and manipulate player coordinate based on emotions?
@@ -73,6 +71,9 @@ private:
         "ecstatic"
     };
     Emotion* emotions[4];
+
+    /** Reference to GameItemTypes */
+    static const GameItemReferenceSet itemReference;
     //GameMap* map;
 public:
     Narrator();
@@ -83,4 +84,4 @@ public:
 };
 
 
-#endif /* game_narrator_hpp */
+#endif /* Narrator_hpp */

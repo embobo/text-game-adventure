@@ -1,5 +1,5 @@
 //
-//  GameNarrator.cpp
+//  Narrator.cpp
 //  textGame
 //
 //  Created by Emma on 1/23/17.
@@ -7,7 +7,9 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "GameNarrator.hpp"
+#include "Narrator.hpp"
+
+const GameItemReferenceSet Narrator::itemReference = GameItemReferenceSetBuilder().build();
 
 /* Emotion class  */
 Emotion::Emotion(std::string emote, std::string* feelingList, int numFeelings, int start) {

@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <utility>
 #include "TileType.hpp"
+#include "GameItemContainer.hpp"
 
 /** @class GameTile
  * @brief GameTile is the base element for defining a game location

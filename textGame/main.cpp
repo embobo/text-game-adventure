@@ -7,7 +7,7 @@
 //  Copyright © 2017 Emma Bobola. All rights reserved.
 //
 
-#include "GameNarrator.hpp"
+#include "Narrator.hpp"
 
 int main(int argc, const char * argv[]) {
 

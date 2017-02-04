@@ -10,6 +10,7 @@
 #define GameItemReferenceSetBuilder_hpp
 
 #include <stdio.h>
+#include <vector>
 #include "GameItemReferenceSet.hpp"
 
 /** @class GameItemReferenceSetBuilder
@@ -20,6 +21,7 @@ class GameItemReferenceSetBuilder {
 private:
     /** map of the referenceSet to be created */
     std::map<std::string, GameItemType> referenceSet;
+    std::vector<GameItemType*> pointerSet;
 
 public:
     /// @{
@@ -28,6 +30,7 @@ public:
      * @note default constructor will construct a default list of game items
      */
     GameItemReferenceSetBuilder();
+    ~GameItemReferenceSetBuilder();
 
     /// @}
 
