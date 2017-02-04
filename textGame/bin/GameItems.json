@@ -1,0 +1,27 @@
+{
+    "alarm clock" : {
+        "casual": "clock",
+        "movable": 1,
+        "consumable": 0
+    },
+    "branch" : {
+        "casual": "stick",
+        "movable": 1,
+        "consumable": 1
+    },
+    "bed" : {
+        "casual": "bed",
+        "movable": 0,
+        "consumable": 0
+    },
+    "paper" : {
+        "casual": "paper",
+        "movable": 1,
+        "consumable": 1
+    },
+    "novel" : {
+        "casual": "book",
+        "movable": 1,
+        "consumable": 1
+    }
+}

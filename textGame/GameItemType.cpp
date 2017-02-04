@@ -15,41 +15,41 @@ GameItemType::GameItemType()
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(const std::string& _name)
-    : name(_name),
-    casualName(_name),
+GameItemType::GameItemType(const std::string& aName)
+    : name(aName),
+    casualName(aName),
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(const std::string& _name, const std::string& _casualName)
-    : name(_name),
-    casualName(_casualName),
+GameItemType::GameItemType(const std::string& aName, const std::string& aCasualName)
+    : name(aName),
+    casualName(aCasualName),
     movable(false),
     consumable(false) {}
 
-GameItemType::GameItemType(const std::string& _name, bool _movable)
-    : name(_name),
-    casualName(_name),
-    movable(_movable),
+GameItemType::GameItemType(const std::string& aName, bool bMovable)
+    : name(aName),
+    casualName(aName),
+    movable(bMovable),
     consumable(false) {}
 
-GameItemType::GameItemType(const std::string& _name, const std::string& _casualName, bool _movable)
-    : name(_name),
-    casualName(_casualName),
-    movable(_movable),
+GameItemType::GameItemType(const std::string& aName, const std::string& aCasualName, bool bMovable)
+    : name(aName),
+    casualName(aCasualName),
+    movable(bMovable),
     consumable(false) {}
 
-GameItemType::GameItemType(const std::string& _name, bool _movable, bool _consumable)
-    : name(_name),
-    casualName(_name),
-    movable(_movable),
-    consumable(_consumable) {}
+GameItemType::GameItemType(const std::string& aName, bool bMovable, bool bConsumable)
+    : name(aName),
+    casualName(aName),
+    movable(bMovable),
+    consumable(bConsumable) {}
 
-GameItemType::GameItemType(const std::string& _name, const std::string& _casualName, bool _movable, bool _consumable)
-    : name(_name),
-    casualName(_casualName),
-    movable(_movable),
-    consumable(_consumable) {}
+GameItemType::GameItemType(const std::string& aName, const std::string& aCasualName, bool bMovable, bool bConsumable)
+    : name(aName),
+    casualName(aCasualName),
+    movable(bMovable),
+    consumable(bConsumable) {}
 
 std::string GameItemType::getName() const {
     return name;

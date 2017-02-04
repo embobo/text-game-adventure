@@ -26,26 +26,26 @@
 class FileParser {
 private:
     /**
-     * @param _fileNamePath string pathname to file
+     * @param filePath string pathname to file
      * @return string which file contents are written
      */
-    static std::string getFileContents(const std::string& _fileNamePath);
+    static std::string getFileContents(const std::string& filePath);
 
 public:
     /**
      * function which performs parsing
-     * @param _input string to parse
-     * @param _delimitter char to separate string
+     * @param inputUnparsed string to parse
+     * @param delimitter char to separate string
      * @return list of parsed strings
      */
-    static std::list<std::string> parseText(const std::string& _input, const char& _delimitter);
+    static std::list<std::string> parseText(const std::string& inputUnparsed, const char& delimitter);
     /**
      * parse text from file by one delimiter
-     * @param _fileNamePath string pathname to file
-     * @param _delimitter char to separate string
+     * @param filePath string pathname to file
+     * @param delimitter char to separate string
      * @return list of parsed strings
      */
-    static std::list<std::string> parseTextFromFile( const std::string& _fileNamePath, const char& _delimitter );
+    static std::list<std::string> parseTextFromFile( const std::string& filePath, const char& delimitter );
 
 };
 
