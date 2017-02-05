@@ -46,10 +46,14 @@ std::string Emotion::getFeeling() {
 /* Brain class */
 
 Narrator::Narrator() {
+    // set up emotions of Narrator
     emotions[0] = new Emotion("certainty",sUncertainty,7,3);
     emotions[1] = new Emotion("tolerance",sTolerance,7,3);
     emotions[2] = new Emotion("interest",sIndifference,7,3);
     emotions[3] = new Emotion("enjoyment",sEnjoyment,7,3);
+
+    // set up GameMap
+    
 }
 
 Narrator::~Narrator() {

@@ -74,7 +74,9 @@ private:
 
     /** Reference to GameItemTypes */
     static const GameItemReferenceSet* itemReference;
+    std::list<GameTileNode*> tileNodes;
     //GameMap* map;
+    GameTileNode* gameMap;
 public:
     Narrator();
     ~Narrator();

@@ -18,8 +18,13 @@
 
 class GameTileNode {
 private:
-    static GameTile* const voidTile;
-    GameTile* const here;
+    /** a void tile to use in default constructor */
+    static GameTile* voidTile;
+    /** this node's tile */
+    GameTile const here;
+    /** this node's item set */
+    GameItemContainer* items;
+    /** the connected nodes to this tile */
     std::map<TileDirectionsCardinal,GameTileNode> connectedNodes;
 public:
     /// @{
@@ -29,10 +34,16 @@ public:
      * default constructor constructs a void tile given no tile
      */
     GameTileNode();
+
     /**
      * @param aTile the "here" tile for this node
      */
-    GameTileNode(GameTile* const aTile);
+    GameTileNode(const GameTile& aTile);
+
+    /**
+     *
+     */
+    ~GameTileNode();
 
     /// @}
 
@@ -44,6 +55,11 @@ public:
      * @return the game tile at this node
      */
     GameTile getTile();
+
+    /**
+     * @return the item container at this node
+     */
+    GameItemContainer getItems();
 
     /**
      * @param direction the TileDirectionCardinal direction for node to retrieve
