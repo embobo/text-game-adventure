@@ -33,6 +33,7 @@ private:
     bool exitable;
     /** set of items contained on this tile */
 
+public:
     /// @{
     /// @name Constructors for GameTile
 
@@ -52,6 +53,7 @@ private:
              bool bAccessible);
     /**
      * Construct a GameTile given name, if player has access and exit ability
+     * @param aTileType type of tile
      * @param aName string name of GameTile
      * @param bAccessible bool true if player can access
      * @param bExitable bool true if player can exit
@@ -65,29 +67,8 @@ private:
 
     /// @}
 
-public:
-
     /** items contained on this tile */
     GameItemContainer* tileItems;
-
-    /// @{
-    /// @name Builder for GameTile
-
-    /**
-     * @param aTileType TileType defining the type of tile
-     * @param aName string unique or specific name of the GameTile
-     * @param bAccessible bool true if player can access this tile
-     * @param bExitable bool true if player can exit this tile
-     * @return GameTile* a new built game tile after checks
-     *
-     * @warning assigning the TileType as "VOID" will set name to "void," accessible to true, and exitable to false
-     */
-    static GameTile* gameTileBuilder(const TileType& aTileType,
-                                     const std::string& aName,
-                                     bool bAccessible,
-                                     bool bExitable);
-
-    /// @}
 
     /// @{
     /// @name Setters and Getters for GameTile properties

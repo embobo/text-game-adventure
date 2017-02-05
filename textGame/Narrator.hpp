@@ -10,7 +10,7 @@
 #ifndef Narrator_hpp
 #define Narrator_hpp
 #include "GameItemReferenceSetBuilder.hpp"
-#include "MapLayout.hpp"
+#include "GameTileNode.hpp"
 
 
 // Map endings into coordinate space and manipulate player coordinate based on emotions?

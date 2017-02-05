@@ -43,20 +43,6 @@ GameTile::~GameTile() {
     tileItems = NULL;
 }
 
-GameTile* GameTile::gameTileBuilder(const TileType& aTileType,
-                                    const std::string& aName,
-                                    bool bAccessible,
-                                    bool bExitable) {
-
-    if( aTileType == TileType::VOID ) {
-        return new GameTile();
-    }
-    if( aTileType == TileType::WALL ) {
-        return new GameTile(aTileType, "a wall", 0, 0);
-    }
-    return new GameTile(aTileType, aName, bAccessible, bExitable);
-}
-
 std::string GameTile::getTileName() const {
     return name;
 }
@@ -75,4 +61,7 @@ bool GameTile::isExitable() const {
 
 void GameTile::setAccessible(bool bAccessible) { accessible = bAccessible; }
 
-void GameTile::setExitable(bool bExitable) { exitable = bExitable; }
+void GameTile::setExitable(bool bExitable) {
+    if( tileType != TileType::VOID && tileType != TileType::WALL )
+        exitable = bExitable;
+}
