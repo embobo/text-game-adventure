@@ -10,7 +10,7 @@
 #ifndef Narrator_hpp
 #define Narrator_hpp
 #include "GameItemReferenceSetBuilder.hpp"
-#include "GameTileNode.hpp"
+#include "GameMap.hpp"
 
 
 // Map endings into coordinate space and manipulate player coordinate based on emotions?
@@ -74,9 +74,9 @@ private:
 
     /** Reference to GameItemTypes */
     static const GameItemReferenceSet* itemReference;
-    std::list<GameTileNode*> tileNodes;
-    //GameMap* map;
-    GameTileNode* gameMap;
+
+    GameMap* map;
+    
 public:
     Narrator();
     ~Narrator();

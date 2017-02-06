@@ -9,7 +9,7 @@
 #ifndef GameTileNode_hpp
 #define GameTileNode_hpp
 
-#include "GameTile.hpp"
+#include "GameTileBuilder.hpp"
 #include "TileDirections.hpp"
 
 /**
@@ -21,11 +21,12 @@ private:
     /** a void tile to use in default constructor */
     static GameTile* voidTile;
     /** this node's tile */
-    GameTile const here;
+    GameTile* here;
     /** this node's item set */
     GameItemContainer* items;
     /** the connected nodes to this tile */
     std::map<TileDirectionsCardinal,GameTileNode> connectedNodes;
+    
 public:
     /// @{
     /// @name GameTileNode Constructors and Destructors
@@ -38,7 +39,7 @@ public:
     /**
      * @param aTile the "here" tile for this node
      */
-    GameTileNode(const GameTile& aTile);
+    GameTileNode(GameTile* const aTile);
 
     /**
      *
@@ -52,14 +53,14 @@ public:
     /// @name GameTileNode methods
 
     /**
-     * @return the game tile at this node
+     * @return a constant pointer to the game tile at this node
      */
-    GameTile getTile();
+    GameTile* getTile() const;
 
     /**
-     * @return the item container at this node
+     * @return a constant pointer to the item container at this node
      */
-    GameItemContainer getItems();
+    GameItemContainer* getItems() const;
 
     /**
      * @param direction the TileDirectionCardinal direction for node to retrieve

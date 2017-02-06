@@ -10,23 +10,29 @@
 
 GameTile* GameTileNode::voidTile = new GameTile();
 
-GameTileNode::GameTileNode() : here(*voidTile) {}
+GameTileNode::GameTileNode() : here(voidTile) {
+    items = new GameItemContainer();
+}
 
-GameTileNode::GameTileNode(const GameTile& aTile) : here(aTile) {}
+GameTileNode::GameTileNode(GameTile* const aTile) : here(aTile) {
+    items = new GameItemContainer();
+}
 
 GameTileNode::~GameTileNode() {
+    delete here;
+    here = NULL;
     delete items;
     items = NULL;
     delete voidTile;
     voidTile = NULL;
 }
 
-GameTile GameTileNode::getTile() {
+GameTile* GameTileNode::getTile() const {
     return here;
 }
 
-GameItemContainer GameTileNode::getItems() {
-    return *items;
+GameItemContainer* GameTileNode::getItems() const {
+    return items;
 }
 
 GameTileNode GameTileNode::getConnectedNode(TileDirectionsCardinal direction) const {

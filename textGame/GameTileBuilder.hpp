@@ -22,7 +22,7 @@ public:
      *
      * @warning assigning the TileType as "VOID" will set name to "void," accessible to true, and exitable to false
      */
-    GameTile* gameTileBuilder(const TileType& aTileType,
+    static GameTile* gameTileBuilder(const TileType& aTileType,
                               const std::string& aName,
                               bool bAccessible,
                               bool bExitable);
