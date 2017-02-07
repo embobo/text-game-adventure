@@ -9,7 +9,7 @@
 #ifndef TileDirections_hpp
 #define TileDirections_hpp
 
-/** @enum types of game tiles */
+/** @enum types of game tile directions (cardinal) */
 enum TileDirectionsCardinal { NORTH, EAST, SOUTH, WEST };
 
 #endif /* TileDirections_hpp */

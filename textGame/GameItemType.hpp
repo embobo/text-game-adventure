@@ -37,12 +37,14 @@ public:
      * @note creates an immovable, unconsumable item "nothing"
      */
     GameItemType();
+
     /**
      * Construct a game item type given name
      * @param aName string full name of game item
      * @note casualName set to name. movable and consumable set false
      */
     GameItemType(const std::string& aName);
+
     /**
      * Construct a game item type given name and casual name
      * @param aName string full name of game item
@@ -90,8 +92,10 @@ public:
                  const std::string& aCasualName,
                  bool bMovable,
                  bool bConsumable);
+
     /// @} End of constructors
 
+    
     /// @{
     /// @name GameItemType Getters and Setters
     

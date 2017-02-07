@@ -35,10 +35,16 @@ GameItemContainer* GameTileNode::getItems() const {
     return items;
 }
 
-GameTileNode GameTileNode::getConnectedNode(TileDirectionsCardinal direction) const {
-    return connectedNodes.at(direction);
+std::list<std::string> GameTileNode::getConnectedNodesList() {
+    std::list<std::string> connectionsList;
+    // do things here
+    return connectionsList;
 }
 
-void GameTileNode::setConnectedNode(TileDirectionsCardinal direction, const GameTileNode tileNode) {
-    connectedNodes.emplace(direction, tileNode);
+GameTileNode GameTileNode::getConnectedNode(std::string node) const {
+    return connectedNodes.at(node);
+}
+
+void GameTileNode::setConnectedNode(std::string node, const GameTileNode tileNode) {
+    connectedNodes.emplace(node, tileNode);
 }

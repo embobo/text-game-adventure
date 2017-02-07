@@ -53,7 +53,8 @@ Narrator::Narrator() {
     emotions[3] = new Emotion("enjoyment",sEnjoyment,7,3);
 
     // set up GameMap
-    
+    map = new GameMap();
+
 }
 
 Narrator::~Narrator() {

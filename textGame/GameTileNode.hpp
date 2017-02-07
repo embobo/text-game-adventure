@@ -25,7 +25,7 @@ private:
     /** this node's item set */
     GameItemContainer* items;
     /** the connected nodes to this tile */
-    std::map<TileDirectionsCardinal,GameTileNode> connectedNodes;
+    std::map<std::string,GameTileNode> connectedNodes;
     
 public:
     /// @{
@@ -63,16 +63,21 @@ public:
     GameItemContainer* getItems() const;
 
     /**
-     * @param direction the TileDirectionCardinal direction for node to retrieve
-     * @return Node in the direction desired
+     * @return a list of the names of nodes attached to this node
      */
-    GameTileNode getConnectedNode(TileDirectionsCardinal direction) const;
+    std::list<std::string> getConnectedNodesList();
 
     /**
-     * @param direction the TileDirectionCardinal direction for node to retrieve
-     * @param tileNode node address to add to the direction desired
+     * @param node the name of the node to retrieve
+     * @return Node in the direction desired
      */
-    void setConnectedNode(TileDirectionsCardinal direction, const GameTileNode tileNode);
+    GameTileNode getConnectedNode(std::string node) const;
+
+    /**
+     * @param node the name of the node to connect
+     * @param tileNode node to add to the direction desired
+     */
+    void setConnectedNode(std::string node, const GameTileNode tileNode);
 
     /// @}
 };

@@ -15,6 +15,6 @@
 #include <string>
 
 /** @enum types of game tiles */
-enum TileType { HOME, WORK, VOID, WALL, OTHER };
+enum TileType { HOME, WORK, VOID, WALL, VIA, OTHER };
 
 #endif /* TileType_hpp */

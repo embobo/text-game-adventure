@@ -20,7 +20,7 @@ public:
      * @param bExitable bool true if player can exit this tile
      * @return GameTile* a new built game tile after checks
      *
-     * @warning assigning the TileType as "VOID" will set name to "void," accessible to true, and exitable to false
+     * @warning assigning the TileType as "VOID" will override all other parameters and set name to "void," accessible to true, and exitable to false
      */
     static GameTile* gameTileBuilder(const TileType& aTileType,
                               const std::string& aName,

@@ -27,10 +27,7 @@ public:
     /// @{
     /// @name GameItemReferenceSet Constructors and Destructors
 
-    /**
-     * @param builder an instance of the GameItemReferenceSetBuilder
-     */
-    //GameItemReferenceSet(const GameItemReferenceSetBuilder& builder);
+    GameItemReferenceSet();
 
     /**
      * @param aReferenceSet a map of references to be assigned to this helper

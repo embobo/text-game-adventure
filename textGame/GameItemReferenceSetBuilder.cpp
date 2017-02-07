@@ -17,6 +17,7 @@ GameItemReferenceSetBuilder::GameItemReferenceSetBuilder() {
     pointerSet.push_back(new GameItemType("paper","paper",1,1));
     pointerSet.push_back(new GameItemType("desk","desk",0,0));
     pointerSet.push_back(new GameItemType("stick","twig",1,1));
+    pointerSet.push_back(new GameItemType("coffee","coffee",1,1));
 
     for (int ii = 0; ii < pointerSet.size(); ++ii)
         referenceSet.emplace(pointerSet.at(ii)->getName(), *(pointerSet.at(ii)));

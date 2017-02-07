@@ -15,23 +15,25 @@
 
 class GameMap {
 private:
+    /** all nodes in gameMap. Used to keep track of what needs to be deleted */
     std::map<std::string,GameTileNode*> tileNodes;
-    
+
+    /** node from which the game starts */
     GameTileNode* startNode;
+    /** node currently placed at */
     GameTileNode* currentNode;
 
     void createGameMap();
 
     void connectNodes(GameTileNode* tile1,
-                      TileDirectionsCardinal direction1,
-                      GameTileNode* tile2,
-                      TileDirectionsCardinal direction2);
+                      GameTileNode* tile2);
+
 public:
     /// @{
     /// @name GameMap Constructors and Destructors
 
     /**
-     * Default Constructor
+     * Default Constructor. Constructs a small game map
      */
     GameMap();
 
