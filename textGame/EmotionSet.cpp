@@ -7,3 +7,55 @@
 //
 
 #include "EmotionSet.hpp"
+
+
+EmotionSet::EmotionSet() {
+
+}
+
+
+std::string EmotionSet::getFeeling() {
+    std::string feeling;
+
+    return feeling;
+}
+
+
+void EmotionSet::moreCertain() {
+
+}
+
+
+void EmotionSet::lessCertain() {
+
+}
+
+
+void EmotionSet::moreTolerant() {
+
+}
+
+
+void EmotionSet::lessTolerant() {
+
+}
+
+
+void EmotionSet::moreInterested() {
+
+}
+
+
+void EmotionSet::lessInterested() {
+
+}
+
+
+void EmotionSet::moreHappy() {
+
+}
+
+
+void EmotionSet::lessHappy() {
+
+}

@@ -9,23 +9,79 @@
 #ifndef EmotionSet_hpp
 #define EmotionSet_hpp
 
-#include <string>
-#include "EmotionTypes.hpp"
+#include "Emotion.hpp"
 
-class Emotion {
+/**
+ * @class EmotionSet
+ * @brief a class to track and parse emotional feeling
+ */
+
+class EmotionSet {
 private:
-    std::string name;
-    std::string* feelings;
-    int base;
-    int intensity;
-    int maxIntensity;
+    
+
 public:
-    Emotion(std::string emote, std::string* feelingList, int numFeelings, int start);
-    void feelBetter();
-    void feelWorse();
-    void reset();
-    int getIntensity();
+    /// @{
+    /// @name EmotionSet Constructors and Destructors
+
+    /**
+     * Default constructor
+     */
+    EmotionSet();
+
+    /// @}
+
+
+    /// @{
+    /// @name Public methods for EmotionSet
+
+    /**
+     * get overall feeling from this emotion set
+     * @return string representation of the emotion (infinitive verb)
+     */
     std::string getFeeling();
+
+    /**
+     * increase certainty
+     */
+    void moreCertain();
+
+    /**
+     * decrease certainty
+     */
+    void lessCertain();
+
+    /**
+     * increase tolerance
+     */
+    void moreTolerant();
+
+    /**
+     * decrease tolerance
+     */
+    void lessTolerant();
+
+    /**
+     * increase interest
+     */
+    void moreInterested();
+
+    /**
+     * decrease interest
+     */
+    void lessInterested();
+
+    /**
+     * increase happiness
+     */
+    void moreHappy();
+
+    /**
+     * decrease happiness
+     */
+    void lessHappy();
+
+    /// @}
 };
 
 #endif /* EmotionSet_hpp */
