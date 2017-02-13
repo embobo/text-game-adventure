@@ -64,7 +64,17 @@ tileTypes::TileType GameTile::getTileType() const {
 }
 
 GameItemContainer* GameTile::getTileItems() const {
-    return tileItems;
+    throw DescriptiveException("Not Implemented");
+    //return tileItems;
+}
+
+std::list<std::string> GameTile::getConnectedTiles() const {
+    std::list<std::string> connections;
+    std::list<GameTile*>::iterator it;
+    for (auto it = connectedTiles.cbegin(); it != connectedTiles.cend(); ++it) {
+        
+    }
+    return connections;
 }
 
 bool GameTile::isAccessible() const {

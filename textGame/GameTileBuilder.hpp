@@ -44,6 +44,12 @@ public:
      */
     static void gameTileAddEnding(GameTile& aTile,
                                   const std::string& anEnding);
+//    /**
+//     * @param aTile1 first GameTile to connect
+//     * @param aTile2 second GameTile to connect
+//     * @param directionFrom1 direction to 2, from 1
+//     */
+//    static void connectTiles(GameTile& aTile1, GameTile& aTile2, movementDirections::directionsCardinal directionFrom1);
 };
 
 #endif /* GameTileBuilder_hpp */

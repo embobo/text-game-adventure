@@ -56,6 +56,7 @@
 		B57693F71E46953D0012EC16 /* GameTileBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameTileBuilder.hpp; sourceTree = "<group>"; };
 		B57693F91E4903260012EC16 /* GameMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap.cpp; sourceTree = "<group>"; };
 		B57693FA1E4903260012EC16 /* GameMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMap.hpp; sourceTree = "<group>"; };
+		B576940C1E521A940012EC16 /* DescriptiveException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DescriptiveException.hpp; sourceTree = "<group>"; };
 		B5D4C9371E317BC400650AFC /* textGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = textGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D4C93A1E317BC400650AFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +95,7 @@
 		B5D4C9391E317BC400650AFC /* textGame */ = {
 			isa = PBXGroup;
 			children = (
+				B576940C1E521A940012EC16 /* DescriptiveException.hpp */,
 				B57693DE1E441BC80012EC16 /* TileType.hpp */,
 				B57693F41E468B300012EC16 /* movementDirections.hpp */,
 				B535A5051E427CFF004025EB /* GameItemType.hpp */,

@@ -15,12 +15,8 @@
 
 class GameMap {
 private:
-    /** static const pointer to const GameTile representing all VOID tiles */
-    GameTile* const voidTile;
-    static const int MAP_WIDTH = 10;
-    static const int MAP_HEIGHT = 10;
     /** all nodes in gameMap. Used to keep track of what needs to be deleted */
-    std::map<std::string,GameTile*> tileNodes;
+    std::list<GameTile*> tileNodes;
 
     /** node from which the game starts */
     GameTile* startNode;
@@ -28,12 +24,8 @@ private:
     GameTile* currentNode;
 
     /** game map defaults to 10x10 */
-    GameTile* const gameMap[MAP_WIDTH][MAP_HEIGHT];
 
     void createGameMap();
-
-    void connectNodes(GameTile* tile1,
-                      GameTile* tile2);
 
 public:
     /// @{

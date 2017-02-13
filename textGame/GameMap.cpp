@@ -10,14 +10,14 @@
 
 //GameTile* const GameMap::
 
-GameMap::GameMap() : voidTile(GameTileBuilder::gameTileBuilder(tileTypes::TileType::VOID, "void", true, true)), gameMap(createGameMap()) {
+GameMap::GameMap() {
+    createGameMap();
 }
 
 GameMap::~GameMap() {
-    std::map<std::string,GameTile*>::iterator it = tileNodes.begin();
+    std::list<GameTile*>::iterator it = tileNodes.begin();
     for(it = tileNodes.begin(); it != tileNodes.end(); ++it) {
-        delete it->second;
-        it->second = NULL;
+        delete (*it);
     }
 }
 
@@ -29,6 +29,10 @@ void GameMap::reset() {
     currentNode = startNode;
 }
 
+void GameMap::createGameMap() {
+    throw DescriptiveException("Not Implemented");
+}
+
 //void GameMap::createGameMap() {
 //    for(int ww = 0; ww < MAP_WIDTH; ++ww) {
 //        for(int hh = 0; hh < MAP_HEIGHT; ++hh) {
@@ -36,8 +40,3 @@ void GameMap::reset() {
 //        }
 //    }
 //}
-
-void GameMap::connectNodes(GameTile* tile1,
-                            GameTile* tile2) {
-    
-}

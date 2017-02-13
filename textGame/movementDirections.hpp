@@ -14,7 +14,7 @@
  */
 namespace movementDirections {
     /** @enum types of game tile directions (cardinal) */
-    enum directionsCardinal { NORTH, EAST, SOUTH, WEST };
+    enum directionsCardinal { NORTH, EAST, SOUTH, WEST, UNKNOWN };
     static const std::string toString(const directionsCardinal& direction) {
         switch (direction) {
             case NORTH:
@@ -33,6 +33,17 @@ namespace movementDirections {
                 return "unknown";
                 break;
         }
+    }
+    static const directionsCardinal toEnum(const std::string& direction) {
+        if(direction.compare("north") != 0)
+            return NORTH;
+        if(direction.compare("east") != 0)
+            return EAST;
+        if(direction.compare("south") != 0)
+            return SOUTH;
+        if(direction.compare("west") != 0)
+            return WEST;
+        return UNKNOWN;
     }
 }
 

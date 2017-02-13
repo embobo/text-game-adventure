@@ -13,9 +13,10 @@
 
 #include <stdio.h>
 #include <utility>
+#include "DescriptiveException.hpp"
 #include "TileType.hpp"
 #include "GameItemContainer.hpp"
-#include "TileDirections.hpp"
+#include "movementDirections.hpp"
 
 /** @class GameTile
  * @brief GameTile is the base element for defining a game location
@@ -40,9 +41,7 @@ protected:
     bool accessible;
     /** true if player can leave this tile */
     bool exitable;
-
-    /** map to nearby tiles */
-    std::map<
+    std::list<GameTile*> connectedTiles;
     /** set of items contained on this tile */
     friend class GameTileBuilder;
 
@@ -100,9 +99,21 @@ public:
      */
     std::string getTileEnding() const;
     /**
+     * @return a list of strings of the connected tiles names concatenated with their short descriptions
+     */
+    std::list<std::string> getConnectedTiles() const;
+    /**
      * @return string of the TileType
      */
     tileTypes::TileType getTileType() const;
+    /**
+     * @return a constant pointer to a nearby tile
+     */
+    GameTile* getNearbyTile(movementDirections::directionsCardinal direction) const;
+    /**
+     *
+     */
+
     /**
      * @return a constant pointer to the item container at this node
      */
