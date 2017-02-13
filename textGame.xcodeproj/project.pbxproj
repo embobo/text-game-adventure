@@ -51,7 +51,7 @@
 		B57693E61E4652680012EC16 /* GameItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = GameItems.json; path = textGame/bin/GameItems.json; sourceTree = "<group>"; };
 		B57693E71E4664E70012EC16 /* GameItemReferenceSetBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameItemReferenceSetBuilder.cpp; sourceTree = "<group>"; };
 		B57693E81E4664E70012EC16 /* GameItemReferenceSetBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameItemReferenceSetBuilder.hpp; sourceTree = "<group>"; };
-		B57693F41E468B300012EC16 /* TileDirections.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TileDirections.hpp; sourceTree = "<group>"; };
+		B57693F41E468B300012EC16 /* movementDirections.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = movementDirections.hpp; sourceTree = "<group>"; };
 		B57693F61E46953D0012EC16 /* GameTileBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTileBuilder.cpp; sourceTree = "<group>"; };
 		B57693F71E46953D0012EC16 /* GameTileBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameTileBuilder.hpp; sourceTree = "<group>"; };
 		B57693F91E4903260012EC16 /* GameMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap.cpp; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B57693DE1E441BC80012EC16 /* TileType.hpp */,
-				B57693F41E468B300012EC16 /* TileDirections.hpp */,
+				B57693F41E468B300012EC16 /* movementDirections.hpp */,
 				B535A5051E427CFF004025EB /* GameItemType.hpp */,
 				B535A5041E427CFF004025EB /* GameItemType.cpp */,
 				B57693CB1E42B1540012EC16 /* GameItemReferenceSet.hpp */,

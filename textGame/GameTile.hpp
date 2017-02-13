@@ -15,6 +15,7 @@
 #include <utility>
 #include "TileType.hpp"
 #include "GameItemContainer.hpp"
+#include "TileDirections.hpp"
 
 /** @class GameTile
  * @brief GameTile is the base element for defining a game location
@@ -39,6 +40,9 @@ protected:
     bool accessible;
     /** true if player can leave this tile */
     bool exitable;
+
+    /** map to nearby tiles */
+    std::map<
     /** set of items contained on this tile */
     friend class GameTileBuilder;
 
