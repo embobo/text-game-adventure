@@ -23,6 +23,8 @@ protected:
     const std::string name;
     /** casual name of item */
     const std::string casualName;
+    /** item description or other additional information */
+    const std::string description;
     /** if player can take this item */
     const bool movable;
     /** if player can use or destroy this item */
@@ -90,6 +92,7 @@ public:
      */
     GameItemType(const std::string& aName,
                  const std::string& aCasualName,
+                 const std::string& aDescription,
                  bool bMovable,
                  bool bConsumable);
 

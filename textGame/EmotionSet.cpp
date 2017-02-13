@@ -8,54 +8,68 @@
 
 #include "EmotionSet.hpp"
 
-
-EmotionSet::EmotionSet() {
-
+void EmotionSet::updateEmotion(EmotionType emotion, bool increase) {
+    if( increase )
+        emotions[emotion].setMorePositive();
+    else
+        emotions[emotion].setLessPositive();
 }
 
+EmotionSet::EmotionSet() {
+    emotions = new std::map<EmotionType,Emotion> ();
+}
 
-std::string EmotionSet::getFeeling() {
+std::string EmotionSet::getFeelingVerb() {
     std::string feeling;
+    int certainty = emotions.at(FEAR_TRUST).getEmotionLevel();
+    int tolerance = emotions.at(ANGER_ACCEPTANCE).getEmotionLevel();
+    int interest = emotions.at(DISGUST_INTEREST).getEmotionLevel();
+    int happiness = emotions.at(GRIEF_HAPPINESS).getEmotionLevel();
+
+
+    return feeling;
+}
+
+std::string EmotionSet::getFeelingAdjective() {
+    std::string feeling;
+    int certainty = emotions.at(FEAR_TRUST).getEmotionLevel();
+    int tolerance = emotions.at(ANGER_ACCEPTANCE).getEmotionLevel();
+    int interest = emotions.at(DISGUST_INTEREST).getEmotionLevel();
+    int happiness = emotions.at(GRIEF_HAPPINESS).getEmotionLevel();
+
 
     return feeling;
 }
 
 
-void EmotionSet::moreCertain() {
-
+void EmotionSet::moreTrusting() {
+    updateEmotion(FEAR_TRUST,true);
 }
 
-
-void EmotionSet::lessCertain() {
-
+void EmotionSet::moreFearful() {
+    updateEmotion(FEAR_TRUST,false);
 }
 
-
-void EmotionSet::moreTolerant() {
-
+void EmotionSet::moreAccepting() {
+    updateEmotion(ANGER_ACCEPTANCE,true);
 }
 
-
-void EmotionSet::lessTolerant() {
-
+void EmotionSet::moreAngry() {
+    updateEmotion(ANGER_ACCEPTANCE,false);
 }
-
 
 void EmotionSet::moreInterested() {
-
+    updateEmotion(DISGUST_INTEREST,true);
 }
 
-
-void EmotionSet::lessInterested() {
-
+void EmotionSet::moreDisgusted() {
+    updateEmotion(DISGUST_INTEREST,false);
 }
-
 
 void EmotionSet::moreHappy() {
-
+    updateEmotion(GRIEF_HAPPINESS,true);
 }
 
-
-void EmotionSet::lessHappy() {
-
+void EmotionSet::moreSad() {
+    updateEmotion(GRIEF_HAPPINESS,false);
 }

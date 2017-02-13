@@ -21,17 +21,26 @@
  */
 
 class GameTile {
-private:
+protected:
 
     /** name of GameTile */
     const std::string name;
+    /** short descripton of tile */
+    std::string shortDescription;
+    /** long description of tile */
+    std::string longDescription;
+    /** the ending if this is the last tile visited */
+    std::string ending;
     /** type of GameTile */
-    const TileType tileType;
+    const tileTypes::TileType tileType;
+    /** items on this tile */
+    GameItemContainer* tileItems;
     /** true if player can enter this tile */
     bool accessible;
     /** true if player can leave this tile */
     bool exitable;
     /** set of items contained on this tile */
+    friend class GameTileBuilder;
 
 public:
     /// @{
@@ -48,7 +57,7 @@ public:
      * @param bAccessible bool true if player can access
      * @note exitable set true by default
      */
-    GameTile(const TileType& aTileType,
+    GameTile(const tileTypes::TileType& aTileType,
              const std::string& aName,
              bool bAccessible);
     /**
@@ -58,7 +67,7 @@ public:
      * @param bAccessible bool true if player can access
      * @param bExitable bool true if player can exit
      */
-    GameTile(const TileType& aTileType,
+    GameTile(const tileTypes::TileType& aTileType,
              const std::string& aName,
              bool bAccessible,
              bool bExitable);
@@ -66,9 +75,6 @@ public:
     ~GameTile();
 
     /// @}
-
-    /** items contained on this tile */
-    GameItemContainer* tileItems;
 
     /// @{
     /// @name Setters and Getters for GameTile properties
@@ -78,13 +84,25 @@ public:
      */
     std::string getTileName() const;
     /**
+     * @return a short description of the tile
+     */
+    std::string getTileShortDescription() const;
+    /**
+     * @return a long description of the tile
+     */
+    std::string getTileLongDescription() const;
+    /**
+     * @return the ending met by leaving this tile
+     */
+    std::string getTileEnding() const;
+    /**
      * @return string of the TileType
      */
-    TileType getTileType() const;
+    tileTypes::TileType getTileType() const;
     /**
-     * @return string of the tile name and type
+     * @return a constant pointer to the item container at this node
      */
-    std::string getTileDetail() const;
+    GameItemContainer* getTileItems() const;
     /**
      * @return bool whether user can access this GameTile
      */

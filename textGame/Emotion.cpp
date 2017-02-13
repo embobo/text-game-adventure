@@ -11,7 +11,7 @@
 #include "Emotion.hpp"
 
 Emotion::Emotion() {
-    init();
+
 }
 
 void Emotion::addEmoteToMap(const EmotionLevel& aLevel,
@@ -119,15 +119,80 @@ std::string Emotion::getEmotionAdjective() {
 }
 
 void Emotion::setMorePositive() {
-
+    changeLevel(true);
 }
 
 
 void Emotion::setLessPositive() {
-
+    changeLevel(false);
 }
 
 
 void Emotion::reset() {
+    level = NEUTRAL;
+}
 
+
+
+
+void FearTrust::init() {
+
+    addEmoteToMap(VERY_NEGATIVE, "terrified", "frightening");
+    addEmoteToMap(PRETTY_NEGATIVE, "scared", "scary");
+    addEmoteToMap(LITTLE_NEGATIVE, "cautious", "concerning");
+    addEmoteToMap(NEUTRAL, "wary", "");
+    addEmoteToMap(LITTLE_POSITIVE, "assured", "convincing");
+    addEmoteToMap(PRETTY_POSITIVE, "confident", "reliable");
+    addEmoteToMap(VERY_POSITIVE, "trusting", "trust-worthy");
+}
+
+FearTrust::FearTrust() {
+    init();
+}
+
+void AngerAcceptance::init() {
+
+    addEmoteToMap(VERY_NEGATIVE, "angry", "enraging");
+    addEmoteToMap(PRETTY_NEGATIVE, "frustrated", "frustrating");
+    addEmoteToMap(LITTLE_NEGATIVE, "annoyed", "annoying");
+    addEmoteToMap(NEUTRAL, "tolerant", "tolerable");
+    addEmoteToMap(LITTLE_POSITIVE, "allowing", "agreeable");
+    addEmoteToMap(PRETTY_POSITIVE, "accepting", "satisfactory");
+    addEmoteToMap(VERY_POSITIVE, "understanding", "understandable");
+
+}
+
+AngerAcceptance::AngerAcceptance() {
+    init();
+}
+
+void DisgustInterest::init() {
+
+    addEmoteToMap(VERY_NEGATIVE, "repulsed", "repulsive");
+    addEmoteToMap(PRETTY_NEGATIVE, "disgusted", "disgusting");
+    addEmoteToMap(LITTLE_NEGATIVE, "bored", "boring");
+    addEmoteToMap(NEUTRAL, "indifferent", "");
+    addEmoteToMap(LITTLE_POSITIVE, "curious", "curious");
+    addEmoteToMap(PRETTY_POSITIVE, "interested", "interesting");
+    addEmoteToMap(VERY_POSITIVE, "fascinated", "fascinating");
+
+}
+
+DisgustInterest::DisgustInterest() {
+    init();
+}
+
+void GriefHappiness::init() {
+
+    addEmoteToMap(VERY_NEGATIVE, "melancholy", "existentially depressing");
+    addEmoteToMap(PRETTY_NEGATIVE, "grieved", "grevious");
+    addEmoteToMap(LITTLE_NEGATIVE, "sad", "depressing");
+    addEmoteToMap(NEUTRAL, "content", "acceptable");
+    addEmoteToMap(LITTLE_POSITIVE, "amused", "amusing");
+    addEmoteToMap(PRETTY_POSITIVE, "happy", "enjoyable");
+    addEmoteToMap(VERY_POSITIVE, "ecstatic", "exciting");
+}
+
+GriefHappiness::GriefHappiness() {
+    init();
 }

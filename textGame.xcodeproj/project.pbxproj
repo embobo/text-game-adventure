@@ -12,13 +12,10 @@
 		B535A50C1E427CFF004025EB /* Narrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B535A5061E427CFF004025EB /* Narrator.cpp */; };
 		B57693CC1E42B1540012EC16 /* GameItemReferenceSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693CA1E42B1540012EC16 /* GameItemReferenceSet.cpp */; };
 		B57693D51E4383A90012EC16 /* FileParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693D31E4383A90012EC16 /* FileParser.cpp */; };
-		B57693D81E4390340012EC16 /* Emotion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693D61E4390340012EC16 /* Emotion.cpp */; };
 		B57693E21E464CCC0012EC16 /* GameItemContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693E01E464CCC0012EC16 /* GameItemContainer.cpp */; };
 		B57693E91E4664E70012EC16 /* GameItemReferenceSetBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693E71E4664E70012EC16 /* GameItemReferenceSetBuilder.cpp */; };
-		B57693F21E4688F30012EC16 /* GameTileNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693F01E4688F30012EC16 /* GameTileNode.cpp */; };
 		B57693F81E46953D0012EC16 /* GameTileBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693F61E46953D0012EC16 /* GameTileBuilder.cpp */; };
 		B57693FB1E4903260012EC16 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693F91E4903260012EC16 /* GameMap.cpp */; };
-		B57694011E4A2CBF0012EC16 /* EmotionSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B57693FF1E4A2CBF0012EC16 /* EmotionSet.cpp */; };
 		B5D4C93B1E317BC400650AFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5D4C93A1E317BC400650AFC /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -48,23 +45,17 @@
 		B57693CF1E42B3680012EC16 /* ItemsSet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ItemsSet.txt; path = textGame/ItemsSet.txt; sourceTree = "<group>"; };
 		B57693D31E4383A90012EC16 /* FileParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileParser.cpp; sourceTree = "<group>"; };
 		B57693D41E4383A90012EC16 /* FileParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileParser.hpp; sourceTree = "<group>"; };
-		B57693D61E4390340012EC16 /* Emotion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Emotion.cpp; sourceTree = "<group>"; };
 		B57693DE1E441BC80012EC16 /* TileType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TileType.hpp; sourceTree = "<group>"; };
 		B57693E01E464CCC0012EC16 /* GameItemContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameItemContainer.cpp; sourceTree = "<group>"; };
 		B57693E11E464CCC0012EC16 /* GameItemContainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameItemContainer.hpp; sourceTree = "<group>"; };
 		B57693E61E4652680012EC16 /* GameItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = GameItems.json; path = textGame/bin/GameItems.json; sourceTree = "<group>"; };
 		B57693E71E4664E70012EC16 /* GameItemReferenceSetBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameItemReferenceSetBuilder.cpp; sourceTree = "<group>"; };
 		B57693E81E4664E70012EC16 /* GameItemReferenceSetBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameItemReferenceSetBuilder.hpp; sourceTree = "<group>"; };
-		B57693F01E4688F30012EC16 /* GameTileNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTileNode.cpp; sourceTree = "<group>"; };
-		B57693F11E4688F30012EC16 /* GameTileNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameTileNode.hpp; sourceTree = "<group>"; };
 		B57693F41E468B300012EC16 /* TileDirections.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TileDirections.hpp; sourceTree = "<group>"; };
 		B57693F61E46953D0012EC16 /* GameTileBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameTileBuilder.cpp; sourceTree = "<group>"; };
 		B57693F71E46953D0012EC16 /* GameTileBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameTileBuilder.hpp; sourceTree = "<group>"; };
 		B57693F91E4903260012EC16 /* GameMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMap.cpp; sourceTree = "<group>"; };
 		B57693FA1E4903260012EC16 /* GameMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameMap.hpp; sourceTree = "<group>"; };
-		B57693FF1E4A2CBF0012EC16 /* EmotionSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmotionSet.cpp; sourceTree = "<group>"; };
-		B57694001E4A2CBF0012EC16 /* EmotionSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EmotionSet.hpp; sourceTree = "<group>"; };
-		B57694031E4A2CE20012EC16 /* Emotion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Emotion.hpp; sourceTree = "<group>"; };
 		B5D4C9371E317BC400650AFC /* textGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = textGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D4C93A1E317BC400650AFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,10 +96,6 @@
 			children = (
 				B57693DE1E441BC80012EC16 /* TileType.hpp */,
 				B57693F41E468B300012EC16 /* TileDirections.hpp */,
-				B57694031E4A2CE20012EC16 /* Emotion.hpp */,
-				B57693D61E4390340012EC16 /* Emotion.cpp */,
-				B57694001E4A2CBF0012EC16 /* EmotionSet.hpp */,
-				B57693FF1E4A2CBF0012EC16 /* EmotionSet.cpp */,
 				B535A5051E427CFF004025EB /* GameItemType.hpp */,
 				B535A5041E427CFF004025EB /* GameItemType.cpp */,
 				B57693CB1E42B1540012EC16 /* GameItemReferenceSet.hpp */,
@@ -121,8 +108,6 @@
 				B535A5021E427CFF004025EB /* GameTile.cpp */,
 				B57693F71E46953D0012EC16 /* GameTileBuilder.hpp */,
 				B57693F61E46953D0012EC16 /* GameTileBuilder.cpp */,
-				B57693F11E4688F30012EC16 /* GameTileNode.hpp */,
-				B57693F01E4688F30012EC16 /* GameTileNode.cpp */,
 				B57693FA1E4903260012EC16 /* GameMap.hpp */,
 				B57693F91E4903260012EC16 /* GameMap.cpp */,
 				B535A5071E427CFF004025EB /* Narrator.hpp */,
@@ -197,10 +182,7 @@
 				B57693E91E4664E70012EC16 /* GameItemReferenceSetBuilder.cpp in Sources */,
 				B57693FB1E4903260012EC16 /* GameMap.cpp in Sources */,
 				B5D4C93B1E317BC400650AFC /* main.cpp in Sources */,
-				B57694011E4A2CBF0012EC16 /* EmotionSet.cpp in Sources */,
 				B57693CC1E42B1540012EC16 /* GameItemReferenceSet.cpp in Sources */,
-				B57693D81E4390340012EC16 /* Emotion.cpp in Sources */,
-				B57693F21E4688F30012EC16 /* GameTileNode.cpp in Sources */,
 				B57693D51E4383A90012EC16 /* FileParser.cpp in Sources */,
 				B535A50B1E427CFF004025EB /* GameItemType.cpp in Sources */,
 				B57693E21E464CCC0012EC16 /* GameItemContainer.cpp in Sources */,

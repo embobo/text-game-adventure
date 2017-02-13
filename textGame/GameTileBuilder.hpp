@@ -22,10 +22,28 @@ public:
      *
      * @warning assigning the TileType as "VOID" will override all other parameters and set name to "void," accessible to true, and exitable to false
      */
-    static GameTile* gameTileBuilder(const TileType& aTileType,
+    static GameTile* gameTileBuilder(const tileTypes::TileType& aTileType,
                               const std::string& aName,
                               bool bAccessible,
                               bool bExitable);
+    /**
+     * @param aTile GameTile to attach a short description to
+     * @param aShortDescription string containing the description to attach
+     */
+    static void gameTileAddShortDescription(GameTile& aTile,
+                                            const std::string& aShortDescription);
+    /**
+     * @param aTile GameTile to attach a long description to
+     * @param aLongDescription string containing the description to attach
+     */
+    static void gameTileAddLongDescription(GameTile& aTile,
+                                           const std::string& aLongDescription);
+    /**
+     * @param aTile GameTile to attach an ending to
+     * @param anEnding the end met by leaving this tile to VOID
+     */
+    static void gameTileAddEnding(GameTile& aTile,
+                                  const std::string& anEnding);
 };
 
 #endif /* GameTileBuilder_hpp */

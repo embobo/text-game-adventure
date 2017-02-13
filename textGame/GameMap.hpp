@@ -9,24 +9,31 @@
 #ifndef GameMap_hpp
 #define GameMap_hpp
 
-#include "GameTileNode.hpp"
+#include "GameTileBuilder.hpp"
 
 #endif /* GameMap_hpp */
 
 class GameMap {
 private:
+    /** static const pointer to const GameTile representing all VOID tiles */
+    GameTile* const voidTile;
+    static const int MAP_WIDTH = 10;
+    static const int MAP_HEIGHT = 10;
     /** all nodes in gameMap. Used to keep track of what needs to be deleted */
-    std::map<std::string,GameTileNode*> tileNodes;
+    std::map<std::string,GameTile*> tileNodes;
 
     /** node from which the game starts */
-    GameTileNode* startNode;
+    GameTile* startNode;
     /** node currently placed at */
-    GameTileNode* currentNode;
+    GameTile* currentNode;
+
+    /** game map defaults to 10x10 */
+    GameTile* const gameMap[MAP_WIDTH][MAP_HEIGHT];
 
     void createGameMap();
 
-    void connectNodes(GameTileNode* tile1,
-                      GameTileNode* tile2);
+    void connectNodes(GameTile* tile1,
+                      GameTile* tile2);
 
 public:
     /// @{
@@ -52,7 +59,7 @@ public:
      * a function for reading and modifying the current game map node
      * @return a constant pointer to the current node
      */
-    GameTileNode* getCurrentNode() const;
+    GameTile* getCurrentNode() const;
 
 
     /**

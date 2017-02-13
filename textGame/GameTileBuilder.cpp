@@ -8,15 +8,36 @@
 
 #include "GameTileBuilder.hpp"
 
-GameTile* GameTileBuilder::gameTileBuilder(const TileType& aTileType,
+GameTile* GameTileBuilder::gameTileBuilder(const tileTypes::TileType& aTileType,
                                            const std::string& aName,
                                            bool bAccessible,
                                            bool bExitable) {
-    if( aTileType == TileType::VOID ) {
-        return new GameTile();
+    GameTile* tile;
+    if( aTileType == tileTypes::TileType::VOID ) {
+        tile = new GameTile();
+        tile->shortDescription = "the void";
+        tile->longDescription = "A place of existential nothingness. You are likely to despair.";
+        return tile;
     }
-    if( aTileType == TileType::WALL ) {
-        return new GameTile(aTileType, "a wall", 0, 0);
+    if( aTileType == tileTypes::TileType::WALL ) {
+        tile = new GameTile(aTileType, "a wall", 0, 0);
+        // ignore, this tile will not be used
+        return tile;
     }
-    return new GameTile(aTileType, aName, bAccessible, bExitable);
+    tile = new GameTile(aTileType, aName, bAccessible, bExitable);
+    return tile;
+}
+
+void GameTileBuilder::gameTileAddShortDescription(GameTile& aTile,
+                                const std::string& aShortDescription) {
+    aTile.shortDescription = aShortDescription;
+}
+
+void GameTileBuilder::gameTileAddLongDescription(GameTile& aTile,
+                                const std::string& aLongDescription) {
+    aTile.longDescription = aLongDescription;
+}
+
+void GameTileBuilder::gameTileAddEnding(GameTile& aTile, const std::string& anEnding) {
+    aTile.ending = anEnding;
 }

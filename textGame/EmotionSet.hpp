@@ -18,6 +18,28 @@
 
 class EmotionSet {
 private:
+    /** @enum EmotionType used in EmotionSet to index Emotions */
+    enum EmotionType {
+        FEAR_TRUST,
+        ANGER_ACCEPTANCE,
+        DISGUST_INTEREST,
+        GRIEF_HAPPINESS
+    };
+
+    /** emotion map */
+    std::map<EmotionType,Emotion>* emotions;
+
+    /** int emotion levels */
+    
+
+    /**
+     * update an emotion more or less positive
+     */
+    void updateEmotion(EmotionType emotion, bool increase);
+
+    /**
+     * get strongest emotions
+     */
     
 
 public:
@@ -36,30 +58,36 @@ public:
     /// @name Public methods for EmotionSet
 
     /**
-     * get overall feeling from this emotion set
+     * get overall feeling from this emotion set as a verb
      * @return string representation of the emotion (infinitive verb)
      */
-    std::string getFeeling();
+    std::string getFeelingVerb();
+
+    /**
+     * get overall feeling from this emotion set as an edjective
+     * @return string representation of the emotion (adjective)
+     */
+    std::string getFeelingAdjective();
 
     /**
      * increase certainty
      */
-    void moreCertain();
+    void moreTrusting();
 
     /**
      * decrease certainty
      */
-    void lessCertain();
+    void moreFearful();
 
     /**
      * increase tolerance
      */
-    void moreTolerant();
+    void moreAccepting();
 
     /**
      * decrease tolerance
      */
-    void lessTolerant();
+    void moreAngry();
 
     /**
      * increase interest
@@ -69,7 +97,7 @@ public:
     /**
      * decrease interest
      */
-    void lessInterested();
+    void moreDisgusted();
 
     /**
      * increase happiness
@@ -79,7 +107,7 @@ public:
     /**
      * decrease happiness
      */
-    void lessHappy();
+    void moreSad();
 
     /// @}
 };

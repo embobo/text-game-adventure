@@ -28,7 +28,7 @@ protected:
         PRETTY_POSITIVE,
         VERY_POSITIVE
     };
-
+    
     /** current level of this emotion */
     EmotionLevel level;
     /** max level of this emotion */
@@ -39,7 +39,7 @@ protected:
     std::map<EmotionLevel,std::string> emoteAdjectiveMap;
 
     /**
-     * init function to call in constructor
+     * virtual init function
      */
     virtual void init() = 0;
 
@@ -63,7 +63,7 @@ public:
     /// @name Emotion constructors and destructors
 
     /**
-     * Default constructor, constructs emotion map
+     * Default constructor, constructs emotion map for none
      */
     Emotion();
 
@@ -109,55 +109,46 @@ public:
     /// @}
 };
 
-/**
- * @class Certainty
- * @brief class which contains the level of trust
- */
-class Certainty : Emotion {
+class FearTrust : public Emotion {
 protected:
     void init();
+    using Emotion::addEmoteToMap;
+public:
+    /**
+     * Default Constructor
+     */
+    FearTrust();
 };
 
-/** @enum emotion levels for terror -> understanding */
-enum EmotionsCertainty {
-    TERROR,
-    FEAR,
-    CAUTION,
-    UNCERTAIN,
-    ASSURANCE,
-    CONFIDENCE,
-    UNDERSTANDING };
-
-/** @enum emotion levels for anger -> trust */
-enum EmotionsTolerance {
-    ANGER,
-    FRUSTRATION,
-    ENDURANCE,
-    TOLERANCE,
-    ACKNOWLEDGEMENT,
-    ACCEPTANCE,
-    TRUST };
-
-/** @enum emotion levels for repulsion -> obsession */
-enum EmotionsInterest {
-    REPULSION,
-    DISGUST,
-    BOREDOM,
-    INDIFFERENCE,
-    CURIOSITY,
-    INTEREST,
-    OBSESSION
+class AngerAcceptance : public Emotion {
+protected:
+    void init();
+public:
+    /**
+     * Default Constructor
+     */
+    AngerAcceptance();
 };
 
-/** @enum emotion levels for grief -> ecstasy */
-enum EmotionsHappiness {
-    GRIEF,
-    SADNESS,
-    MELANCHOLY,
-    CONTENT,
-    AMUSED,
-    HAPPY,
-    ECSTASY
+class DisgustInterest : public Emotion {
+protected:
+    void init();
+public:
+    /**
+     * Default Constructor
+     */
+    DisgustInterest();
 };
+
+class GriefHappiness : public Emotion {
+protected:
+    void init();
+public:
+    /**
+     * Default Constructor
+     */
+    GriefHappiness();
+};
+
 
 #endif /* EmotionTypes_hpp */

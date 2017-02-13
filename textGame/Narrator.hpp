@@ -52,7 +52,7 @@ public:
     /**
      *
      */
-    std::string getFeelings();
+    //std::string getFeelings();
 
     /**
      *

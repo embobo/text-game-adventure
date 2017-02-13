@@ -27,11 +27,11 @@ void Narrator::reset() {
 
 }
 
-std::string Narrator::getFeelings() {
-    std::string feelings;
-    // todo
-    return feelings;
-}
+//std::string Narrator::getFeelings() {
+//    std::string feelings;
+//    // todo
+//    return feelings;
+//}
 
 std::string Narrator::help() {
     std::string help;

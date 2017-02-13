@@ -10,14 +10,14 @@
 #include "GameTile.hpp"
 
 GameTile::GameTile()
-    : name("the void"),
-    tileType(TileType::VOID),
+    : name("nothing"),
+    tileType(tileTypes::TileType::VOID),
     accessible(true),
     exitable(false) {
         tileItems = new GameItemContainer();
     }
 
-GameTile::GameTile(const TileType& aTileType,
+GameTile::GameTile(const tileTypes::TileType& aTileType,
                    const std::string& aName,
                    bool bAccessible)
     : tileType(aTileType),
@@ -27,7 +27,7 @@ GameTile::GameTile(const TileType& aTileType,
         tileItems = new GameItemContainer();
     }
 
-GameTile::GameTile(const TileType& aTileType,
+GameTile::GameTile(const tileTypes::TileType& aTileType,
                    const std::string& aName,
                    bool bAccessible,
                    bool bExitable)
@@ -47,8 +47,24 @@ std::string GameTile::getTileName() const {
     return name;
 }
 
-TileType GameTile::getTileType() const {
+std::string GameTile::getTileShortDescription() const {
+    return shortDescription;
+}
+
+std::string GameTile::getTileLongDescription() const {
+    return longDescription;
+}
+
+std::string GameTile::getTileEnding() const {
+    return ending;
+}
+
+tileTypes::TileType GameTile::getTileType() const {
     return tileType;
+}
+
+GameItemContainer* GameTile::getTileItems() const {
+    return tileItems;
 }
 
 bool GameTile::isAccessible() const {
@@ -59,9 +75,12 @@ bool GameTile::isExitable() const {
     return exitable;
 }
 
-void GameTile::setAccessible(bool bAccessible) { accessible = bAccessible; }
+void GameTile::setAccessible(bool bAccessible) {
+    if( tileType != tileTypes::TileType::WALL )
+        accessible = bAccessible;
+}
 
 void GameTile::setExitable(bool bExitable) {
-    if( tileType != TileType::VOID && tileType != TileType::WALL )
+    if( tileType != tileTypes::TileType::VOID && tileType != tileTypes::TileType::WALL )
         exitable = bExitable;
 }
