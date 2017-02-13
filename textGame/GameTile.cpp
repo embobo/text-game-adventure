@@ -10,11 +10,16 @@
 #include "GameTile.hpp"
 
 GameTile::GameTile()
-    : name("nothing"),
+    : name("I accept my fate"),
     tileType(tileTypes::TileType::VOID),
     accessible(true),
-    exitable(false) {
-        tileItems = new GameItemContainer();
+    exitable(false),
+    visited(false),
+    shortDescription("Nothingness"),
+    longDescription ("The emptiness of existential confusion."),
+    lesson("Try again."),
+    ending("Error.") {
+        //tileItems = new GameItemContainer();
     }
 
 GameTile::GameTile(const tileTypes::TileType& aTileType,
@@ -23,8 +28,9 @@ GameTile::GameTile(const tileTypes::TileType& aTileType,
     : tileType(aTileType),
     name(aName),
     accessible(bAccessible),
-    exitable(true) {
-        tileItems = new GameItemContainer();
+    exitable(true),
+    visited(false) {
+        //tileItems = new GameItemContainer();
     }
 
 GameTile::GameTile(const tileTypes::TileType& aTileType,
@@ -34,13 +40,18 @@ GameTile::GameTile(const tileTypes::TileType& aTileType,
     : tileType(aTileType),
     name(aName),
     accessible(bAccessible),
-    exitable(bExitable) {
-        tileItems = new GameItemContainer();
+    exitable(bExitable),
+    visited(false) {
+        //tileItems = new GameItemContainer();
     }
 
-GameTile::~GameTile() {
-    delete tileItems;
-    tileItems = NULL;
+//GameTile::~GameTile() {
+//    delete tileItems;
+//    tileItems = NULL;
+//}
+
+void GameTile::resetTile() {
+    visited = false;
 }
 
 std::string GameTile::getTileName() const {
@@ -52,7 +63,14 @@ std::string GameTile::getTileShortDescription() const {
 }
 
 std::string GameTile::getTileLongDescription() const {
-    return longDescription;
+    if(!visited)
+        return longDescription;
+    else
+        return lesson;
+}
+
+std::string GameTile::getTileLesson() const {
+    return lesson;
 }
 
 std::string GameTile::getTileEnding() const {
@@ -63,18 +81,24 @@ tileTypes::TileType GameTile::getTileType() const {
     return tileType;
 }
 
-GameItemContainer* GameTile::getTileItems() const {
-    throw DescriptiveException("Not Implemented");
-    //return tileItems;
-}
+//GameItemContainer* GameTile::getTileItems() const {
+//    throw DescriptiveException("Not Implemented");
+//    //return tileItems;
+//}
 
-std::list<std::string> GameTile::getConnectedTiles() const {
+std::list<std::string> GameTile::readConnectedTiles() const {
     std::list<std::string> connections;
     std::list<GameTile*>::iterator it;
     for (auto it = connectedTiles.cbegin(); it != connectedTiles.cend(); ++it) {
-        
+        connections.push_back((*it)->getTileName() + " - " + (*it)->getTileShortDescription());
     }
     return connections;
+}
+
+GameTile* GameTile::visitAdjacentTile(const int& index) const {
+    if(index > (connectedTiles.size() - 1))
+        throw DescriptiveException("GameTile index out of range","GameTile::getAdjacentTile");
+    return connectedTiles.at(index);
 }
 
 bool GameTile::isAccessible() const {

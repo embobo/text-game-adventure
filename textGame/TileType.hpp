@@ -26,7 +26,7 @@ namespace tileTypes {
                 return "work";
                 break;
             case VOID:
-                return "the void";
+                return "void";
                 break;
             case WALL:
                 return "wall";
@@ -38,6 +38,19 @@ namespace tileTypes {
                 return "unknown";
                 break;
         }
+    }
+    static const TileType toEnum(const std::string tileName) {
+        if(tileName.compare("home"))
+            return HOME;
+        if(tileName.compare("work"))
+            return WORK;
+        if(tileName.compare("void"))
+            return VOID;
+        if(tileName.compare("wall"))
+            return WALL;
+        if(tileName.compare("via"))
+            return VIA;
+        else return OTHER;
     }
 }
 

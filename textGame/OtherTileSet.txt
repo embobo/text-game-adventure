@@ -1,0 +1,9 @@
+type, name, accessible, exitable, shortDesc, longDesc, ending;
+
+other
+War and Peace
+1
+1
+Everyone is sad. It snows.
+It is snowing. You are searching for the meaning of life by throwing yourself into the world, and in doing so, risking all that you have.
+You fall in love with beauty. Magnificent, shining, brown-eyed beauty. It's a bear. You love with the glossy fur and soft eyes. You believe your obsessive flirtations will be returned because you have given the bear many compliments. You tie yourself to the bear in a fit of rage over your unrequited love. Sadly for you, bears do not like to be tied to infatuated humans. The bear jumps into a river. The bear can swim. You cannot.

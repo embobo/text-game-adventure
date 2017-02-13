@@ -10,6 +10,6 @@
 #include "Narrator.hpp"
 
 int main(int argc, const char * argv[]) {
-
-    return 0;
+    Narrator* myNarrator = new Narrator();
+    myNarrator->gameLoop();
 }

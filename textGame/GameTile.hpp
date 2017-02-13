@@ -17,6 +17,7 @@
 #include "TileType.hpp"
 #include "GameItemContainer.hpp"
 #include "movementDirections.hpp"
+#include <vector>
 
 /** @class GameTile
  * @brief GameTile is the base element for defining a game location
@@ -31,18 +32,23 @@ protected:
     std::string shortDescription;
     /** long description of tile */
     std::string longDescription;
-    /** the ending if this is the last tile visited */
+    /** the lesson learned by leaving this tile */
+    std::string lesson;
+    /** the ending that occurs by leaving this tile */
     std::string ending;
     /** type of GameTile */
     const tileTypes::TileType tileType;
     /** items on this tile */
-    GameItemContainer* tileItems;
+    //GameItemContainer* tileItems;
     /** true if player can enter this tile */
     bool accessible;
     /** true if player can leave this tile */
     bool exitable;
-    std::list<GameTile*> connectedTiles;
-    /** set of items contained on this tile */
+    /** true if player has been here */
+    bool visited;
+    /** tiles connected to this tile */
+    std::vector<GameTile*> connectedTiles;
+
     friend class GameTileBuilder;
 
 public:
@@ -75,7 +81,9 @@ public:
              bool bAccessible,
              bool bExitable);
 
-    ~GameTile();
+    //~GameTile();
+
+    void resetTile();
 
     /// @}
 
@@ -83,41 +91,49 @@ public:
     /// @name Setters and Getters for GameTile properties
 
     /**
+     * read the name of this tile
      * @return string unique GameTile name
      */
     std::string getTileName() const;
     /**
-     * @return a short description of the tile
+     * read the short description of this tile
+     * @return a short description of the tile as a string
      */
     std::string getTileShortDescription() const;
     /**
-     * @return a long description of the tile
+     * read the long description of this tile
+     * @return a long description of the tile as a string
      */
     std::string getTileLongDescription() const;
     /**
-     * @return the ending met by leaving this tile
+     * read the lesson of this tile
+     * @return the lesson of the tile as a string
+     */
+    std::string getTileLesson() const;
+    /**
+     * read the ending that occurs by leaving this tile
+     * @return the ending met by leaving this tile as a string
      */
     std::string getTileEnding() const;
     /**
+     * reads the names and short descriptions of connected tiles
      * @return a list of strings of the connected tiles names concatenated with their short descriptions
      */
-    std::list<std::string> getConnectedTiles() const;
+    std::list<std::string> readConnectedTiles() const;
+    /**
+     * gets a tile in the list of connected tiles
+     * @param index the 0-index of the desired tile
+     * @return a pointer to the desired tile
+     */
+    GameTile* visitAdjacentTile(const int& index) const;
     /**
      * @return string of the TileType
      */
     tileTypes::TileType getTileType() const;
     /**
-     * @return a constant pointer to a nearby tile
-     */
-    GameTile* getNearbyTile(movementDirections::directionsCardinal direction) const;
-    /**
-     *
-     */
-
-    /**
      * @return a constant pointer to the item container at this node
      */
-    GameItemContainer* getTileItems() const;
+    //GameItemContainer* getTileItems() const;
     /**
      * @return bool whether user can access this GameTile
      */
@@ -134,6 +150,10 @@ public:
      * @param bExitable true if player can exit this GameTile
      */
     void setExitable(bool bExitable);
+    /**
+     *
+     */
+    void visitTile() { visited = true; }
 
 
     /// @}

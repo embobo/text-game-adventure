@@ -38,6 +38,19 @@ void GameTileBuilder::gameTileAddLongDescription(GameTile& aTile,
     aTile.longDescription = aLongDescription;
 }
 
+void GameTileBuilder::gameTileAddLesson(GameTile& aTile,
+                       const std::string& aLesson) {
+    aTile.lesson = aLesson;
+}
+
 void GameTileBuilder::gameTileAddEnding(GameTile& aTile, const std::string& anEnding) {
     aTile.ending = anEnding;
+}
+
+void GameTileBuilder::connectTiles(GameTile& aTile1,
+                                   GameTile& aTile2) {
+    if(aTile1.tileType != tileTypes::VOID)
+        aTile1.connectedTiles.push_back(&aTile2);
+    if(aTile2.tileType != tileTypes::VOID)
+        aTile2.connectedTiles.push_back(&aTile1);
 }

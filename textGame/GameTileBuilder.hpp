@@ -44,12 +44,19 @@ public:
      */
     static void gameTileAddEnding(GameTile& aTile,
                                   const std::string& anEnding);
-//    /**
-//     * @param aTile1 first GameTile to connect
-//     * @param aTile2 second GameTile to connect
-//     * @param directionFrom1 direction to 2, from 1
-//     */
-//    static void connectTiles(GameTile& aTile1, GameTile& aTile2, movementDirections::directionsCardinal directionFrom1);
+    /**
+     * @param aTile GameTile to attach an ending to
+     * @param aLesson the lesson learned by leaving this tile
+     */
+    static void gameTileAddLesson(GameTile& aTile,
+                                  const std::string& aLesson);
+    /**
+     * connect two tiles to each other
+     * @param aTile1 first GameTile to connect
+     * @param aTile2 second GameTile to connect
+     */
+    static void connectTiles(GameTile& aTile1,
+                             GameTile& aTile2);
 };
 
 #endif /* GameTileBuilder_hpp */

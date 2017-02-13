@@ -9,21 +9,39 @@
 
 #ifndef Narrator_hpp
 #define Narrator_hpp
-#include "GameItemReferenceSetBuilder.hpp"
+//#include "GameItemReferenceSetBuilder.hpp"
+#include <iostream>
 #include "GameMap.hpp"
 
 
 /**
- * Narrator Class. This is the heart of the game
+ * @class Narrator
+ * this class runs the game
  */
 
 class Narrator {
 private:
-
-    /** Reference to GameItemTypes */
-    static const GameItemReferenceSet* itemReference;
-
+    static const std::string introPrompt;
+    static const std::string helpPrompt;
+    static const std::string endPrompt;
+    static const std::string userPrompt;
     GameMap* map;
+    enum ProgressState { INIT, STARTED, VALID, DEAD, QUIT };
+    ProgressState game_state;
+    //std::map<std::string, void* (*) (void*)> optionMap;
+
+    std::string thisTilePrompt() const;
+
+    void runInit();
+    void runStart();
+    void runValid();
+    void runDead();
+    void runGame();
+    void nextNode(const int& nodeIndex);
+    std::string readHelp() const;
+    std::string yesNoOptions(const std::string& yes, const std::string& no);
+    std::pair<std::string,int> enumerateOptions(std::list<std::string> options) const;
+    void resetNarrator();
     
 public:
     /// @{
@@ -45,19 +63,10 @@ public:
     /// @name Narrator public methods
 
     /**
-     *
+     * main game loop
      */
-    void reset();
+    void gameLoop();
 
-    /**
-     *
-     */
-    //std::string getFeelings();
-
-    /**
-     *
-     */
-    std::string help();
 
     /// @}
 };
