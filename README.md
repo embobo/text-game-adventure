@@ -1,12 +1,12 @@
 # Trial and Error #
 
-Trial and Error is a text based adventure game where the player finds themself in a literary conundrum.
+Trial and Error is a text based adventure game where the player finds her or himself in a literary conundrum.
 
 ## To Play ##
 
 Each prompt shows options that can be selected with a character shown in parentheses.
 
-To make a choice, type the character shown.
+To make a choice, type the character for the desired choice and hit `ENTER`.
 
 > Example:
 > ```
